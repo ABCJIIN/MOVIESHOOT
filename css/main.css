@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+.wrap {
+    height: 2900px;
+    background: bisque;
+}
+
+section .con {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.slider {
+    background: pink;
+    height: 800px;
+}
+
+.slider > h1 {
+    position: relative;
+    z-index: 1;
+    top: 90px;
+    left: 140px;
+}
+
+.slider > .slider__content {
+    position: relative;
+    top: 100px;
+    z-index: 0;
+    background: olivedrab;
+    width: 1000px;
+    height: 600px;
+}
+
+.popular {
+    background: mediumspringgreen;
+    height: 650px;
+}
+
+.popular > h1 {
+    position: relative;
+    top: 80px;
+    left: 40px;
+}
+
+.popular > .popular__content {
+    position: relative;
+    top: 100px;
+    background: rgb(185, 110, 83);
+    width: 1200px;
+    height: 500px;
+}
+
+.present {
+    background: plum;
+    height: 650px;
+}
+
+.present > h1 {
+    position: relative;
+    top: 80px;
+    left: 40px;
+}
+
+.present > .present__content {
+    position: relative;
+    top: 100px;
+    background: rgb(115, 147, 216);
+    width: 1200px;
+    height: 500px;
+}
+
+.schedule {
+    background: skyblue;
+    height: 650px;
+}
+
+.schedule > h1 {
+    position: relative;
+    top: 80px;
+    left: 40px;
+}
+
+.schedule > .schedule__content {
+    position: relative;
+    top: 100px;
+    background: rgb(79, 146, 79);
+    width: 1200px;
+    height: 500px;
+}
