@@ -10,38 +10,83 @@
 section .con {
     max-width: 1440px;
     margin: 0 auto;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .slider {
     background: pink;
-    height: 800px;
+    height: 700px;
 }
 
-/* .slider > .slider__content {
-    width: 100%;
-    height: 300px;
-    background: orange;
-} */
-
-.slider > h1 {
-    position: absolute;
+.slider > .slider__content {
+    position: relative;
     top: 100px;
+    width: 100%;
+    height: 500px;
+    background: orange;
+}
+
+.slider > .slider__content > h1 {
+    position: absolute;
+    top: -20px;
+    left: 10px;
 }
 
 .popular {
     background: mediumspringgreen;
-    height: 650px;
+    height: 600px;
+}
+
+.popular > .popular__content {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 500px;
+    background: skyblue;
+}
+
+.popular > .popular__content > h1 {
+    position: absolute;
+    top: -20px;
+    left: 10px;
 }
 
 .present {
     background: plum;
-    height: 650px;
+    height: 600px;
+}
+
+.present > .present__content {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 500px;
+    background: rgb(154, 222, 76);
+}
+
+.present > .present__content > h1 {
+    position: absolute;
+    top: -20px;
+    left: 10px;
 }
 
 .schedule {
-    background: skyblue;
-    height: 650px;
+    background: rgb(140, 135, 235);
+    height: 600px;
+}
+
+.schedule > .schedule__content {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 500px;
+    background: rgb(222, 76, 76);
+}
+
+.schedule > .schedule__content > h1 {
+    position: absolute;
+    top: -20px;
+    left: 10px;
 }
 
 /* 테블릿: 767px 이상*/
