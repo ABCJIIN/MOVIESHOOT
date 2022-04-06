@@ -5,40 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOVIE SHOOT</title>
+    <link rel="stylesheet" href="./library/fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header class="header">
-        <div class="header__nav">
-            <h1>logo</h1>
-            <nav>
-                <ul>
-                    <li>홈</li>
-                    <li>인기영화</li>
-                    <li>현재상영영화</li>
-                    <li>개봉예정영화</li>
+        <div class="header__Mnav">
+            <div class="trigger">
+                <button class="mobile close"><i class="fas fa-times fa-lg"></i></button>
+            </div>
+            <nav class="Mmenu">
+                <ul class="Mmenu__main">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">인기영화</a></li>
+                    <li><a href="#">현재상영영화</a></li>
+                    <li><a href="#">개봉예정영화</a></li>
                 </ul>
             </nav>
-            <div>검색</div>
+        </div>
+        <div class="header__nav">
+            <h1>logo</h1>
+            <div class="trigger">
+                <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul class="menu__main">
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">인기영화</a></li>
+                        <li><a href="#">현재상영영화</a></li>
+                        <li><a href="#">개봉예정영화</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search">검색</div>
         </div>
     </header>
     <main class="wrap">
         <section class="slider">
-            <h1>What's new?</h1>
-            <div class="slider__content con"></div>
+            <div class="slider__content con">
+                <h1>What's new?</h1>
+            </div>
         </section>
         <section class="popular">
-            <h1>인기영화</h1>
-            <div class="popular__content con"></div>
+            <div class="popular__content con">
+                <h1>인기영화</h1>
+            </div>
         </section>
         <section class="present">
-            <h1>현재상영영화</h1>
-            <div class="present__content con"></div>
+            <div class="present__content con">
+                <h1>현재상영영화</h1>
+            </div>
         </section>
         <section class="schedule">
-            <h1>개봉예정영화</h1>
-            <div class="schedule__content con"></div>
+            <div class="schedule__content con">
+                <h1>개봉예정영화</h1>
+            </div>
         </section>
     </main>
     <footer class="footer"></footer>
