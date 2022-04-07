@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+/* 모바일: 0~766px*/
+
+.pageWrap {
+    background: bisque;
+}
+
+.popularPage {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: yellowgreen;
+    height: 800px;
+}
+
+.popularPage h1 {
+    display: inline;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.popularPage .popularPage__content {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 600px;
+    background: rgb(100, 100, 214);
+}
+
+/* 테블릿: 767px 이상*/
+@media all and (min-width:767px) {
+
+    .popularPage {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+}
+
+/* pc: 1024px 이상 */
+@media all and (min-width:1024px) {
+
+
+}

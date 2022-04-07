@@ -7,6 +7,11 @@
     background: bisque;
 }
 
+.slider, .popular, .present, .schedule {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 section .con {
     max-width: 1440px;
     margin: 0 auto;
@@ -14,87 +19,106 @@ section .con {
 }
 
 .slider {
+    position: relative;
     background: pink;
     height: 700px;
 }
 
-.slider > .slider__content {
-    position: relative;
+.slider h1 {
+    display: inline;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.slider .slider__content {
+    position: absolute;
     top: 100px;
     width: 100%;
     height: 500px;
     background: orange;
 }
 
-.slider > .slider__content > h1 {
-    position: absolute;
-    top: -20px;
-    left: 10px;
-}
-
 .popular {
+    position: relative;
     background: mediumspringgreen;
     height: 600px;
 }
 
-.popular > .popular__content {
-    position: relative;
+.popular h1 {
+    display: inline;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.popular .popular__content {
+    position: absolute;
     top: 50px;
     width: 100%;
     height: 500px;
     background: skyblue;
 }
 
-.popular > .popular__content > h1 {
-    position: absolute;
-    top: -20px;
-    left: 10px;
-}
-
 .present {
+    position: relative;
     background: plum;
     height: 600px;
 }
 
-.present > .present__content {
-    position: relative;
+.present h1 {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.present .present__content {
+    position: absolute;
     top: 50px;
     width: 100%;
     height: 500px;
     background: rgb(154, 222, 76);
 }
 
-.present > .present__content > h1 {
-    position: absolute;
-    top: -20px;
-    left: 10px;
-}
-
 .schedule {
+    position: relative;
     background: rgb(140, 135, 235);
     height: 600px;
 }
 
-.schedule > .schedule__content {
-    position: relative;
+.schedule h1 {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.schedule .schedule__content {
+    position: absolute;
     top: 50px;
     width: 100%;
     height: 500px;
     background: rgb(222, 76, 76);
 }
 
-.schedule > .schedule__content > h1 {
-    position: absolute;
-    top: -20px;
-    left: 10px;
-}
 
 /* 테블릿: 767px 이상*/
 @media all and (min-width:767px) {
+    
+    .slider {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+
+    .popular, .present, .schedule {
+        margin: 0 auto;
+        width: 95%;
+    }
 
 }
 
 /* pc: 1024px 이상 */
 @media all and (min-width:1024px) {
+
 
 }
