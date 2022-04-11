@@ -5,143 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./library/swiper5/swiper.min.css">
   <style>
-    .wrap {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  box-sizing: border-box;  
+    .swiper-container {
+    width: 640px;
+    height: 360px;
+    margin: 40px auto;
 }
-.wrap * {
-  box-sizing: inherit;
-}
-.wrap-inner {
-  
-/*   height: 0;
-  padding-bottom: 56.25%;
-  margin: 0 auto;
-  overflow: hidden;  
-  width: 100%;
-  position: relative; */
-}
-
-.swiper-outter {
-  width: 100%;
-  padding: 0 65px;
-  position: relative;
-}
- 
-.swiper-button-prev,
-.swiper-button-next {
-    width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  background-size: 100% auto;
-}
-
-.swiper-button-prev {
-  background-image: url("data:image/png;base64,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");
-}
-.swiper-button-next {
-  background-image: url("data:image/png;base64,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");
-}
-
-.swiper-container {
-  width: 100%;
-  position: relative;
-}
-.swiper-wrapper {
-  width: 100%;
-  
-
-}
-.swiper-slide {
-  width: 100%;
-  background-color: #EFEFEF;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-.swiper-slide .video-container {
-  width: 100%;
-  height: 0;
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.swiper-slide .video-container iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; 
-}
-
-/*
-.swiper-slide {
-  background: #fff;
-  text-align: center;
-  position: relative;
-}
-.video-container {
-  position: relative;
-  padding-bottom: 67%;
-  width: 100%;
-  height: 0;
-}
-.video-play,
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  pointer-events: none;
-}
-*/
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="wrap-inner">
-  
-      <div class="swiper-outter">
-        <div id="video-swiper" class="swiper-container">
-          <div class="swiper-wrapper">
-  
-            <div class="swiper-slide">
-              <div class="video-container">
-                <div class="yt-player" data-id="MxBRpWcXeOA"></div>
-              </div>
-            </div>
-  
-            <div class="swiper-slide">
-              <div class="video-container">
-                <div class="yt-player" data-id="IKw25_XI1nA"></div>
-              </div>
-            </div>
-  
-            <div class="swiper-slide">
-              <div class="video-container">
-                <div class="yt-player" data-id="yciFX_zbdFs"></div>
-              </div>
-            </div>
-  
-          </div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><div id="player1"></div></div>
+        <div class="swiper-slide"><div id="player2"></div></div>
+        <div class="swiper-slide"><div id="player3"></div></div>
     </div>
-  </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
 </body>
 <script src="./test.js"></script>
-<script src="./library/swiper5/swiper.min.js"></script>
 </html>

@@ -1,49 +1,65 @@
-
 var tag = document.createElement('script');
-
 tag.src = "https://www.youtube.com/iframe_api";
+
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+var yt = [];
 function onYouTubeIframeAPIReady() {
 
-  var swiper = document.getElementById('video-swiper');
-  var slides = swiper.getElementsByClassName('swiper-slide')
-  
-  var players = [];
-  
-  for (var i=0; i < slides.length; i++) {
-    var element = slides[i].getElementsByClassName('yt-player')[0];
-    var id = element.getAttribute('data-id');
-    
-    var player = new YT.Player(element, {
-      height: '315',
-      width: '560',
-      videoId: id,
-      playerVars: {
-        autoplay: false,
-        color: '#7fbc03',
-        modestbranding: true,
-        rel: 0
-      }
+    let w = '100%';
+    let h = '100%';
+
+    yt['player1'] = new YT.Player('player1', {
+        width: w,
+        height: h,
+        videoId: '4d118fHF8QE',
+        events: {
+            'onReady': onPlayerReady,
+        },
     });
-    players.push(player);
-  }
-  
-  var mySwiper = new Swiper('.swiper-container', {
-    effect: 'slide',
-    spaceBetween: 0,
-    slidesPerView: 1,
-    centeredSlides: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    on: {
-      slideChange: function() {        
-        players[mySwiper.previousIndex].pauseVideo();
-      }
-    }
-  });
-  
+    yt['player2'] = new YT.Player('player2', {
+        width: w,
+        height: h,
+        videoId: 'HzUDAaYMNsA',
+    });
+    yt['player3'] = new YT.Player('player3', {
+        width: w,
+        height: h,
+        videoId: '5LI1PysAlkU',
+    });
 }
+
+function onPlayerReady(event) {
+    event.target.mute();
+    event.target.playVideo();
+}
+
+const swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+swiper.on('transitionStart', function(){
+    yt['player1'].pauseVideo();
+    yt['player2'].pauseVideo();
+    yt['player3'].pauseVideo();
+});
+
+swiper.on('transitionEnd', function(){
+
+    var index = this.realIndex;
+    var slide = document.getElementsByClassName('swiper-slide')[index];
+    var slideVideo = slide.getElementsByTagName('iframe')[0];
+    var slideVideoId = slideVideo.getAttribute('id');
+
+    if(slideVideo != null || slideVideo != undefined){
+        yt[slideVideoId].mute();
+        yt[slideVideoId].playVideo();
+    }
+});
