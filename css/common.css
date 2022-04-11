@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
 @import url(./reset.css);
 
 /* 모바일: 0~766px*/
@@ -6,6 +7,12 @@
 .header {
     width: 100%;
     background: rgb(224, 21, 21);
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
 .header__Mnav {
@@ -49,6 +56,33 @@
     border-bottom: 1px solid grey;
     position: relative;
     font-size: 1.3rem;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.header__Mnav .Mmenu__main > li > a {
+    display: inline-block;
+    padding: 15px 0;
+    position: relative;
+}
+
+.header__Mnav .Mmenu__main > li > a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    border-radius: 5px;
+    left: 50%;
+    position: absolute;
+    background: #b50000;
+    opacity: 50%;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.header__Mnav .Mmenu__main > li > a:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 .header__nav {
@@ -69,8 +103,29 @@
     text-align: center;
 }
 
+.header__nav > h1 > a > img {
+    width: 100px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.header__nav > .trigger > .hamburger {
+    position: relative;
+    left: 10px;
+}
+
+.header__nav > .trigger > .hamburger > i {
+    color: white;
+}
+
 .header__nav > .search {
     text-align: center;
+}
+
+.header__nav > .search > i {
+    display: inline;
+    font-size: 20px;
+    color: white;
 }
 
 .header__nav .menu__main {
@@ -94,7 +149,7 @@
     width: 200px;
     height: 120px;
     line-height: 120px;
-    background: orange;
+    /* background: orange; */
     }
 
     .header__nav > .menu {
@@ -104,7 +159,7 @@
         align-items: center;
         font-size: 1.3em;
         height: 120px;
-        background: tomato;
+        /* background: tomato; */
     }
 
     .header__nav .menu__main {
@@ -115,12 +170,49 @@
     .header__nav > .menu > nav > .menu__main > li {
         padding: 0 10px;
         margin: 0 0 0 10px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+
+    .header__nav .menu__main > li > a {
+        display: inline-block;
+        padding: 15px 0;
+        position: relative;
+    }
+    
+    .header__nav .menu__main > li > a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 5px;
+        border-radius: 5px;
+        left: 50%;
+        position: absolute;
+        background: #b50000;
+        opacity: 50%;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    
+    .header__nav .menu__main > li > a:hover:after { 
+        width: 100%; 
+        left: 0; 
     }
 
     .header__nav > .search {
         height: 120px;
         line-height: 120px;
-        background: blue;
+        /* background: blue; */
+        position: relative;
+    }
+    
+    .header__nav > .search > i {
+        display: inline;
+        font-size: 20px;
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        color: white;
     }
 
     .header__nav > .trigger {

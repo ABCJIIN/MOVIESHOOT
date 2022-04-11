@@ -49,31 +49,22 @@
         <section class="slider">
             <h1>What's new?</h1>
             <div class="slider__content con">
-                <div id="video-swiper" class="swiper-container">
+                <!-- Slider main container -->
+                <div class="swiper-container mySwiper">
+                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-
+                    <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="video-container">
-                                <div class="yt-player" data-id="Ko2NWhXI9e8"></div>
-                            </div>
+                            <iframe width="500" height="400" src="https://youtu.be/DqFyxu0Am9I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-
-                        <div class="swiper-slide">
-                            <div class="video-container">
-                                <div class="yt-player" data-id="iHIIC6lwYCU"></div>
-                            </div>
-                        </div>
-                
-                        <div class="swiper-slide">
-                            <div class="video-container">
-                                <div class="yt-player" data-id="yFZh-Wqi7RI"></div>
-                            </div>
-                        </div>
-                    
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
                     </div>
-                </div>
+
+                    <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
+                </div>
 			</div>
         </section>
         <section class="popular">
@@ -91,7 +82,6 @@
     </main>
     <footer class="footer"></footer>
     <!-- script -->
-    <script src="./test.js"></script>
     <script src="./library/swiper5/swiper.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/main.js"></script>
