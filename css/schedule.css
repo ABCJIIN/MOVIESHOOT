@@ -4,10 +4,10 @@
 /* 모바일: 0~766px*/
 
 .pageWrap {
-    background: bisque;
+    background: rgb(243, 183, 230);
 }
 
-.popularPage {
+.schedulePage {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
@@ -15,14 +15,14 @@
     height: 800px;
 }
 
-.popularPage h1 {
+.schedulePage h1 {
     display: inline;
     position: absolute;
     top: 50px;
     left: 30px;
 }
 
-.popularPage .popularPage__content {
+.schedulePage .schedulePage__content {
     max-width: 1440px;
     margin: 0 auto;
     position: absolute;
@@ -35,7 +35,7 @@
 /* 테블릿: 767px 이상*/
 @media all and (min-width:767px) {
 
-    .popularPage {
+    .schedulePage {
         margin: 0 auto;
         width: 95%;
     }

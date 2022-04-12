@@ -5,7 +5,9 @@
 /* 모바일: 0~766px*/
 
 .header {
+    position: fixed;
     width: 100%;
+    z-index: 2;
     background: rgb(224, 21, 21);
 }
 
@@ -17,15 +19,22 @@
 
 .header__Mnav {
     display: none;
+    position: fixed;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0);
+    line-height: 100%;
+    background: rgb(31, 31, 31);
 }
 
 .header__Mnav > .trigger {
     height: 60px;
-    background-color: rgb(82, 82, 82);
+    background-color: rgb(158, 76, 76);
     position: relative;
+    z-index: 2;
+}
+
+.header__Mnav > .trigger > .close > i {
+    color: white;
 }
 
 .mobile {
@@ -39,6 +48,7 @@
 	top: 20px;
 	left: 20px;
 	font-size: 1.2rem;
+    z-index: 2;
 }
 
 .header__Mnav > .Mmenu {
@@ -88,7 +98,7 @@
 .header__nav {
     max-width: 1440px; 
     height: 60px;
-    background: rgb(90, 90, 90);
+    background: rgb(66, 66, 66);
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -135,6 +145,11 @@
 
 /* 테블릿: 767px 이상*/
 @media all and (min-width:767px) {
+
+    .header {
+        position: static;
+    }
+
     .header__nav {
         height: 120px;
     }

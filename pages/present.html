@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>현재상영영화</title>
     <link rel="stylesheet" href="../library/fontawesome-free-5.15.3-web/css/all.min.css">
-    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/present.css">
     <link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
@@ -25,7 +25,9 @@
             </nav>
         </div>
         <div class="header__nav">
-            <h1><a href="./index.html">logo</a></h1>
+            <h1>
+                <a href="./index.html"><img src="../img/LOGO.png" alt="logo"></a>
+            </h1>
             <div class="trigger">
                 <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
             </div>
@@ -39,15 +41,16 @@
                     </ul>
                 </nav>
             </div>
-            <div class="search">검색</div>
+            <div class="search"><i class="fas fa-search"></i></div>
         </div>
     </header>
     <main class="pageWrap">
-        <section class="popularPage">
+        <section class="presentPage">
             <h1>현재상영영화</h1>
-            <div class="popularPage__content"></div>
+            <div class="presentPage__content"></div>
         </section>
     </main>
     <footer class="footer"></footer>
+    <script src="../js/common.js"></script>
 </body>
 </html>
