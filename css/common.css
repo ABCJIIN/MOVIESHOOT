@@ -119,10 +119,10 @@
     vertical-align: middle;
 }
 
-.header__nav > .trigger > .hamburger {
+/* .header__nav > .trigger > .hamburger {
     position: relative;
     left: 10px;
-}
+} */
 
 .header__nav > .trigger > .hamburger > i {
     color: white;

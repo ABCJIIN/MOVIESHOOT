@@ -47,10 +47,55 @@
     <main class="pageWrap">
         <section class="schedulePage">
             <h1>개봉예정영화</h1>
-            <div class="schedulePage__content"></div>
+            <div class="schedulePage__content">
+                <div class="container"></div>
+                <div class="buttonWrapper">
+                    <button class="more">더 보기</button>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer"></footer>
     <script src="../js/common.js"></script>
+    <script>
+        let page = 1;
+        const key = "26e37826233bf74e2ff5973dabc4d65b";
+        const base_url = "https://image.tmdb.org/t/p/w300/";
+        const container = document.querySelector(".container");
+        
+        function fetchMovie(page){
+            const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=ko-KR&page=${page}`;
+            fetch(url)
+            .then(res => res.json())
+            .then(function(res){
+                const movies = res.results;
+                movies.map(function(movie){
+                    //console.log(movie.title);
+                    const div = document.createElement('div');
+                    const output = `
+                        <img src="${base_url + movie.poster_path}">
+                    `;
+                    div.innerHTML = output;
+                    container.appendChild(div);
+                });
+            })
+            .catch(erro => console.log(erro));
+        };
+        
+        window.addEventListener('onLoad', fetchMovie());
+        
+        //더보기 버튼 클릭 리스너    
+        const moreButton = document.querySelector(".more");
+        moreButton.addEventListener('click', function(){
+            if(page < 3){
+                page += 1;
+                fetchMovie(page);
+            } else {
+                this.disabled = true;
+            }
+            
+            console.log(page);
+        });
+    </script>
 </body>
 </html>

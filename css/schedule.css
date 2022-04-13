@@ -1,43 +1,96 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
 @import url(./reset.css);
 
 /* 모바일: 0~766px*/
 
 .pageWrap {
     background: rgb(243, 183, 230);
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .schedulePage {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    background: yellowgreen;
-    height: 800px;
+    /* background: yellowgreen;
+    height: 800px; */
 }
 
 .schedulePage h1 {
-    display: inline;
-    position: absolute;
-    top: 50px;
-    left: 30px;
+    display: block;
+    position: relative;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    top: 60px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(35, 35, 35);
 }
 
 .schedulePage .schedulePage__content {
     max-width: 1440px;
     margin: 0 auto;
     position: absolute;
-    top: 100px;
+    top: 120px;
     width: 100%;
-    height: 600px;
-    background: rgb(100, 100, 214);
+    /* height: 600px; */
+    background: rgb(35, 35, 35);
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.container > div {
+    flex-basis:  25%;
+    flex : 0;
+    margin: 8px;
+    padding: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+.container > div:hover {
+    transform: scale(1.2);
+}
+
+.buttonWrapper {
+    width: 100vs;
+    text-align: center;
+}
+
+.more {
+    width: 120px;
+    padding: 8px 15px;
+    margin: 10px auto;
 }
 
 /* 테블릿: 767px 이상*/
 @media all and (min-width:767px) {
 
-    .schedulePage {
+    /* .schedulePage {
         margin: 0 auto;
         width: 95%;
+    } */
+
+    .schedulePage h1 {
+        height: 120px;
+        line-height: 180px;
+        top: 0px;
+        text-align: left;
+        padding-left: 80px;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(35, 35, 35);
     }
 
 }
