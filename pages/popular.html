@@ -71,6 +71,7 @@
         const overlay = document.querySelector("#overlay");
         const closeButton = document.querySelector(".nextClose");
         let currentScrollY = "";
+        let results = null;
         
         function fetchMovie(page){
             const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=ko-KR&page=${page}`;
@@ -78,6 +79,8 @@
             .then(res => res.json())
             .then(function(res){
                 const movies = res.results;
+                results = movies;
+                console.log(results);
                 movies.map(function(movie){
 
                     const div = document.createElement('div');
@@ -88,13 +91,18 @@
                     container.appendChild(div);
 
                     div.setAttribute("data-id", movie.id);
-                    div.setAttribute("onClick", "openView(this)");   
+                    div.setAttribute("onClick", `openView(this, ${movie.id})`);   
+
                 });
             })
             .catch(erro => console.log(erro));
         };
         
-        function openView(e){
+        function openView(e, id){
+            const rMovie = results.filter(result=>result.id == id);
+            
+            console.log(rMovie);
+
             const posterImage = e.querySelector("img").src;
             overlay.classList.add("show");
             overlay.setAttribute("style", `background-image: url(${posterImage}); background-size: auto; background-repeat: no-repeat;`)
