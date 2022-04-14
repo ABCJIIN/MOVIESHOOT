@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
 @import url(./reset.css);
 
@@ -8,16 +9,12 @@
     background: rgb(139, 32, 116);
     margin: 0 auto;
     max-width: 1440px;
-    /* height: 500px; */
-    /* padding-bottom: 100px; */
 }
 
 .popularPage {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    /* background: yellowgreen; */
-    /* height: 800px; */
 }
 
 .popularPage h1 {
@@ -27,8 +24,6 @@
     line-height: 75px;
     text-align: center;
     top: 60px;
-    /* left: 30px; */
-    /* padding-left: 30px; */
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 22px;
     color: rgb(255, 255, 255);
@@ -41,7 +36,6 @@
     position: absolute;
     top: 120px;
     width: 100%;
-    /* height: 600px; */
     background: rgb(35, 35, 35);
 }
 
@@ -69,21 +63,82 @@
 .buttonWrapper {
     width: 100vs;
     text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .more {
-    width: 120px;
+    width: 140px;
+    height: 45px;
     padding: 8px 15px;
-    margin: 10px auto;
+    margin: 40px auto 60px auto;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.more:hover {
+    background-color: #e5312e;
+    box-shadow: 0px 15px 20px rgba(148, 6, 6, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+
+#overlay{
+    position: fixed;
+    top:0; left:0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+
+#overlay.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nextClose {
+    position: absolute;
+    top:10px; right: 10px;
+    width: 36px;
+    margin:0; padding: 0;
+    cursor: pointer;
+    margin: 8px auto;
+}
+
+
+.youtube{
+    width: 60%;
+    height: 60%;
+}
+
+iframe{
+    display: block;
+    width: 100%;
+}
+
+.noVideo {
+    color: white;
 }
 
 /* 테블릿: 767px 이상*/
 @media all and (min-width:767px) {
-
-    /* .popularPage {
-        margin: 0 auto;
-        width: 95%;
-    } */
 
     .popularPage h1 {
         height: 120px;

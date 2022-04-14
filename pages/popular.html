@@ -50,8 +50,13 @@
             <div class="popularPage__content">
                 <div class="container"></div>
                 <div class="buttonWrapper">
-                    <button class="more">더 보기</button>
+                    <button class="more">more</button>
                 </div>
+                <div id="overlay">
+                    <div class="explanation"></div>
+                    <button class="nextClose">
+                        <i class="fas fa-times fa-lg"></i>
+                    </button>
             </div>
         </section>
     </main>
@@ -62,6 +67,10 @@
         const key = "26e37826233bf74e2ff5973dabc4d65b";
         const base_url = "https://image.tmdb.org/t/p/w300/";
         const container = document.querySelector(".container");
+        const youtube = document.querySelector(".explanation");
+        const overlay = document.querySelector("#overlay");
+        const closeButton = document.querySelector(".nextClose");
+        let currentScrollY = "";
         
         function fetchMovie(page){
             const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=ko-KR&page=${page}`;
@@ -70,21 +79,36 @@
             .then(function(res){
                 const movies = res.results;
                 movies.map(function(movie){
-                    //console.log(movie.title);
+
                     const div = document.createElement('div');
                     const output = `
                         <img src="${base_url + movie.poster_path}">
                     `;
                     div.innerHTML = output;
                     container.appendChild(div);
+
+                    div.setAttribute("data-id", movie.id);
+                    div.setAttribute("onClick", "openView(this)");   
                 });
             })
             .catch(erro => console.log(erro));
         };
         
+        function openView(e){
+            const posterImage = e.querySelector("img").src;
+            overlay.classList.add("show");
+            overlay.setAttribute("style", `background-image: url(${posterImage}); background-size: auto; background-repeat: no-repeat;`)
+            document.body.classList.add("stop-scrolling");
+        }
+
+        closeButton.addEventListener('click', () => {
+            overlay.classList.remove("show");
+            youtube.innerHTML = "";
+            document.body.classList.remove("stop-scrolling");
+        });
+
         window.addEventListener('onLoad', fetchMovie());
         
-        //더보기 버튼 클릭 리스너    
         const moreButton = document.querySelector(".more");
         moreButton.addEventListener('click', function(){
             if(page < 3){
