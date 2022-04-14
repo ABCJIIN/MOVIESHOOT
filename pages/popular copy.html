@@ -52,18 +52,26 @@
                 <div class="buttonWrapper">
                     <button class="more">more</button>
                 </div>
+                <div id="overlay">
+                    <div class="explanation"></div>
+                    <button class="nextClose">
+                        <i class="fas fa-times fa-lg"></i>
+                    </button>
             </div>
         </section>
     </main>
     <footer class="footer"></footer>
-
     <script src="../js/common.js"></script>
     <script>
         let page = 1;
         const key = "26e37826233bf74e2ff5973dabc4d65b";
         const base_url = "https://image.tmdb.org/t/p/w300/";
         const container = document.querySelector(".container");
-        const movieTitle = document.querySelector(".movieTitle");
+        const youtube = document.querySelector(".explanation");
+        const overlay = document.querySelector("#overlay");
+        const closeButton = document.querySelector(".nextClose");
+        let currentScrollY = "";
+        let results = null;
         
         function fetchMovie(page){
             const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=ko-KR&page=${page}`;
@@ -71,26 +79,66 @@
             .then(res => res.json())
             .then(function(res){
                 const movies = res.results;
+                results = movies;
+                console.log(results);
                 movies.map(function(movie){
-                    //console.log(movie.title);
+
                     const div = document.createElement('div');
                     const output = `
                         <img src="${base_url + movie.poster_path}">
-                        <h2>${movie.title}</h2>
-                        <p class="overview">${movie.overview}</p>
-                        <p class="release_date">개봉일: ${movie.release_date}</p>
-                    `;
 
+                    `;
                     div.innerHTML = output;
                     container.appendChild(div);
+
+                    div.setAttribute("data-id", movie.id);
+                    div.setAttribute("onClick", `openView(this, ${movie.id})`);   
+
                 });
             })
             .catch(erro => console.log(erro));
         };
         
+        //썸네일 클릭시 실행 될 함수 event로 DOM 정보를 가져와서 필요한 데이터를 빼서 사용
+        function openView(e){
+            //영화의 아이디를 가져 왔다.
+            const movieId = e.getAttribute("data-id");
+            console.log(movieId);
+
+            //다시 요청을 해서 유튜브 플레이용 아이디(key)를 가져와야 한다. 언어를 한국어로 한정하면 비디오를 찾지 못하는 경우가 많다.
+            const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${key}`;
+            fetch(movieUrl)
+                .then(res => res.json())
+                .then(function(res){
+                    let output = "";
+                    
+                    if(res.results.length > 0){
+                        const youtubeId = res.results[0].key;//첫번재 영상만 사용하기 하자. 값이 없을 경우도 있음.
+                        output = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${youtubeId}?autoplay=1"></iframe>`; 
+                    } else {
+                        output = `<h3 class="noVideo">재생할 예고편이 없습니다.</h3>`;
+                        console.log(output);
+                    }
+                    
+                    youtube.innerHTML = output;
+                })
+                .catch(erro => console.log(erro));
+
+            const posterImage = e.querySelector("img").src;
+            
+            overlay.classList.add("show");
+            overlay.setAttribute("style", `background-image: url(${posterImage}); background-size: auto; background-repeat: no-repeat;`)
+            document.body.classList.add("stop-scrolling");
+        }
+
+        closeButton.addEventListener('click', () => {
+            overlay.classList.remove("show");
+            youtube.innerHTML = "";
+            document.body.classList.remove("stop-scrolling");
+        });
+
         window.addEventListener('onLoad', fetchMovie());
         
-        //더보기 버튼 클릭 리스너    
         const moreButton = document.querySelector(".more");
         moreButton.addEventListener('click', function(){
             if(page < 3){
@@ -100,7 +148,7 @@
                 this.disabled = true;
             }
             
-            // console.log(page);
+            console.log(page);
         });
     </script>
 </body>

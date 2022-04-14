@@ -28,7 +28,7 @@
 
 .header__Mnav > .trigger {
     height: 60px;
-    background-color: rgb(158, 76, 76);
+    background-color: rgb(30, 30, 30);
     position: relative;
     z-index: 2;
 }
@@ -84,8 +84,8 @@
     border-radius: 5px;
     left: 50%;
     position: absolute;
-    background: #b50000;
-    opacity: 50%;
+    background: #7f0000;
+    /* opacity: 50%; */
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -114,15 +114,8 @@
 }
 
 .header__nav > h1 > a > img {
-    width: 100px;
-    height: 60px;
-    vertical-align: middle;
+    width: 70px;
 }
-
-/* .header__nav > .trigger > .hamburger {
-    position: relative;
-    left: 10px;
-} */
 
 .header__nav > .trigger > .hamburger > i {
     color: white;
@@ -159,12 +152,14 @@
     }
 
     .header__nav > h1 {
-    /* position: relative;
-    left: 30px; */
     width: 200px;
     height: 120px;
     line-height: 120px;
-    /* background: orange; */
+    }
+    
+    .header__nav > h1 > a > img {
+        width: 100px;
+        vertical-align: middle;
     }
 
     .header__nav > .menu {
@@ -174,7 +169,6 @@
         align-items: center;
         font-size: 1.3em;
         height: 120px;
-        /* background: tomato; */
     }
 
     .header__nav .menu__main {
@@ -217,7 +211,6 @@
     .header__nav > .search {
         height: 120px;
         line-height: 120px;
-        /* background: blue; */
         position: relative;
     }
     

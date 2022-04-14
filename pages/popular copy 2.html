@@ -48,7 +48,12 @@
         <section class="popularPage">
             <h1>인기영화</h1>
             <div class="popularPage__content">
-                <div class="container"></div>
+                <div class="container">
+                    <div class="movieTitle">
+                    </div>
+                    <div class="content">
+                    </div>
+                </div>
                 <div class="buttonWrapper">
                     <button class="more">more</button>
                 </div>
@@ -66,23 +71,25 @@
         const movieTitle = document.querySelector(".movieTitle");
         
         function fetchMovie(page){
-            const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=ko-KR&page=${page}`;
+            const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=ko-KR&page=${page}`;
             fetch(url)
             .then(res => res.json())
             .then(function(res){
                 const movies = res.results;
+
                 movies.map(function(movie){
-                    //console.log(movie.title);
-                    const div = document.createElement('div');
+                    const movieImg = document.createElement('div');
+                    const titleDiv = document.createElement('div');                    
                     const output = `
                         <img src="${base_url + movie.poster_path}">
-                        <h2>${movie.title}</h2>
-                        <p class="overview">${movie.overview}</p>
-                        <p class="release_date">개봉일: ${movie.release_date}</p>
                     `;
+                    const content = `${movie.overview}`
+                    movieImg.innerHTML = output;
+                    titleDiv.innerHTML = content;
+                    console.log('movieImg', titleDiv)
 
-                    div.innerHTML = output;
-                    container.appendChild(div);
+                    movieTitle.appendChild(titleDiv)
+                    container.appendChild(movieImg);
                 });
             })
             .catch(erro => console.log(erro));
