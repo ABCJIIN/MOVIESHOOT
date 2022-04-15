@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&display=swap');
 @import url(./reset.css);
 
 /* 모바일: 0~766px*/
@@ -67,6 +67,7 @@
     position: relative;
     font-size: 1.3rem;
     font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 300;
 }
 
 .header__Mnav .Mmenu__main > li > a {
@@ -80,12 +81,11 @@
     bottom: 0;
     content: "";
     display: block;
-    height: 5px;
+    height: 3px;
     border-radius: 5px;
     left: 50%;
     position: absolute;
-    background: #7f0000;
-    /* opacity: 50%; */
+    background: #e80000;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -95,10 +95,14 @@
     left: 0; 
 }
 
+.header__Mnav .Mmenu__main > li > a:hover {
+    font-weight: 500;
+}
+
 .header__nav {
     max-width: 1440px; 
     height: 60px;
-    background: rgb(66, 66, 66);
+    background: rgb(20, 20, 20);
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -180,6 +184,7 @@
         padding: 0 10px;
         margin: 0 0 0 10px;
         font-family: 'IBM Plex Sans KR', sans-serif;
+        font-weight: 300;
     }
 
     .header__nav .menu__main > li > a {
@@ -193,12 +198,11 @@
         bottom: 0;
         content: "";
         display: block;
-        height: 5px;
+        height: 4px;
         border-radius: 5px;
         left: 50%;
         position: absolute;
-        background: #b50000;
-        opacity: 50%;
+        background: #e80000;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
     }
@@ -206,6 +210,10 @@
     .header__nav .menu__main > li > a:hover:after { 
         width: 100%; 
         left: 0; 
+    }
+
+    .header__nav .menu__main > li > a:hover {
+        font-weight: 500;
     }
 
     .header__nav > .search {

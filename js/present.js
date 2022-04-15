@@ -2,7 +2,7 @@
 let page = 1;
 const key = "26e37826233bf74e2ff5973dabc4d65b";
 const base_url = "https://image.tmdb.org/t/p/w300/";
-const container = document.querySelector(".prcontainer");
+const container = document.querySelector(".cpreContaine");
 
 function fetchMovie(page){
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=ko-KR&page=${page}`;
