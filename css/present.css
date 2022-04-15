@@ -44,14 +44,14 @@
     background: rgb(35, 35, 35);
 }
 
-.container {
+.containerE {
     display: flex;
     flex-flow: row wrap;
     justify-items: center;
     justify-content: center;
 }
 
-.container > div {
+.containerE > div {
     flex-basis:  25%;
     flex : 0;
     margin: 8px;
@@ -61,7 +61,7 @@
     transition: all 0.2s linear;
 }
 
-.container > div:hover {
+.containerE > div:hover {
     transform: scale(1.2);
 }
 

@@ -1,62 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>자바스크립트 - 영화데이터베이스 API</title>
-    <style>
-        /* *{margin:0; padding: 0;}
-
-        .subsubject {
-            text-align: center;
-        } */
-
-        .container{
-            display: flex;
-            flex-flow: row wrap;
-            justify-items: center;
-            justify-content: center;
-        }
-
-        .container > div{
-            flex-basis:  25%;
-            flex : 0;
-            margin: 8px;
-            padding: 8px;
-            cursor: pointer;
-            box-sizing: border-box;
-            transition: all 0.2s linear;
-
-        }
-        .container > div:hover {
-            transform: scale(1.2);
-        }
-        .buttonWrapper{
-            width: 100vs;
-            text-align: center;
-        }
-        .more{
-            width: 120px;
-            padding: 8px 15px;
-            margin: 10px auto;
-        }
-
-    </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 </head>
 <body>
+        
 
-    <div class="container"></div>
-    <div class="buttonWrapper">
-        <button class="more">더 보기</button>
-    </div>
-    
-    <script>
-        let page = 1;
-        const key = "26e37826233bf74e2ff5973dabc4d65b";
+        <script>
+                let page = 1;
+        const key = "Your API Key";
         const base_url = "https://image.tmdb.org/t/p/w300/";
         const container = document.querySelector(".container");
-        
+
         function fetchMovie(page){
             const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=ko-KR&page=${page}`;
             fetch(url)
@@ -68,6 +26,9 @@
                     const div = document.createElement('div');
                     const output = `
                         <img src="${base_url + movie.poster_path}">
+                        <h2>${movie.title}</h2>
+                        <p class="overview">${movie.overview}</p>
+                        <p class="release_date">개봉일: ${movie.release_date}</p>
                     `;
                     div.innerHTML = output;
                     container.appendChild(div);
@@ -77,20 +38,9 @@
         };
         
         window.addEventListener('onLoad', fetchMovie());
-        
-        //더보기 버튼 클릭 리스너    
-        const moreButton = document.querySelector(".more");
-        moreButton.addEventListener('click', function(){
-            if(page < 2){
-                page += 1;
-                fetchMovie(page);
-            } else {
-                this.disabled = true;
-            }
-            
-            console.log(page);
-        });
-    </script>
 
+
+        
+        </script>
 </body>
 </html>

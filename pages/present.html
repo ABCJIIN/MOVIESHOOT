@@ -48,7 +48,7 @@
         <section class="presentPage">
             <h1>현재상영영화</h1>
             <div class="presentPage__content">
-                <div class="container"></div>
+                <div class="containerE"></div>
                 <div class="buttonWrapper">
                     <button class="more">more</button>
                 </div>
@@ -66,7 +66,7 @@
         let page = 1;
         const key = "26e37826233bf74e2ff5973dabc4d65b";
         const base_url = "https://image.tmdb.org/t/p/w300/";
-        const container = document.querySelector(".container");
+        const container = document.querySelector(".containerE");
         
         function fetchMovie(page){
             const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=ko-KR&page=${page}`;
