@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>인기영화</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../library/fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="stylesheet" href="../css/popular.css">
     <link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
     <header class="header">
-        <div class="header__Mnav">
+        <div class="header__Mnav animate__animated animate__slideInLeft">
             <div class="trigger">
                 <button class="mobile close"><i class="fas fa-times fa-lg"></i></button>
             </div>
@@ -26,7 +27,7 @@
         </div>
         <div class="header__nav">
             <h1>
-                <a href="./index.html"><img src="../img/LOGO.png" alt="logo"></a>
+                <a href="../index.html"><img src="../img/LOGO.png" alt="logo"></a>
             </h1>
             <div class="trigger">
                 <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
@@ -48,7 +49,7 @@
         <section class="popularPage">
             <h1>인기영화</h1>
             <div class="popularPage__content">
-                <div class="containerD"></div>
+                <div onclick = 'window.location.href = "./soon.html"' class="containerD"></div>
                 <div class="buttonWrapper">
                     <button class="more">more</button>
                 </div>
@@ -77,8 +78,7 @@
                     const output = `
                         <img src="${base_url + movie.poster_path}">
                         <h2>${movie.title}</h2>
-                        <p class="overview">${movie.overview}</p>
-                        <p class="release_date">개봉일: ${movie.release_date}</p>
+                        <p class="release_date">${movie.release_date}</p>
                     `;
 
                     div.innerHTML = output;
@@ -93,7 +93,7 @@
         //더보기 버튼 클릭 리스너    
         const moreButton = document.querySelector(".more");
         moreButton.addEventListener('click', function(){
-            if(page < 3){
+            if(page < 4){
                 page += 1;
                 fetchMovie(page);
             } else {

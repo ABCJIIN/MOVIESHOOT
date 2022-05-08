@@ -27,7 +27,7 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 22px;
     color: rgb(255, 255, 255);
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(20, 20, 20);
 }
 
 .schedulePage .schedulePage__content {
@@ -36,7 +36,7 @@
     position: absolute;
     top: 120px;
     width: 100%;
-    background: rgb(35, 35, 35);
+    background: rgb(20, 20, 20);
 }
 
 .containerF {
@@ -56,8 +56,39 @@
     transition: all 0.2s linear;
 }
 
+.containerF > div > h2 {
+    color: white;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: none;
+}
+
+.containerF > div > p {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    display: none;
+}
+
 .containerF > div:hover {
     transform: scale(1.2);
+}
+
+.containerF > div:hover > img {
+    opacity: 20%;
+}
+
+.containerF > div:hover > h2 {
+    display: block;
+}
+
+.containerF > div:hover > p {
+    display: block;
 }
 
 .buttonWrapper {
@@ -107,7 +138,7 @@
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 25px;
         color: rgb(255, 255, 255);
-        background-color: rgb(35, 35, 35);
+        background-color: rgb(20, 20, 20);
     }
 
 }

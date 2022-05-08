@@ -8,18 +8,21 @@ const containerA = document.querySelector(".containerA");
 const containerB = document.querySelector(".containerB");
 const containerC = document.querySelector(".containerC");
 
+
 //인기영화
 function fetchMovieA(pageA){
     const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=ko-KR&page=${pageA}`;
     fetch(url)
     .then(res => res.json())
     .then(function(res){
-        const movies = res.results;
+        const movies = res.results.slice(0.,4);
         movies.map(function(movie){
             console.log(movie.title);
             const div = document.createElement('div');
             const output = `
                 <img src="${base_url + movie.poster_path}">
+                <h2>${movie.title}</h2>
+                <p class="release_date">${movie.release_date}</p>
             `;
             div.innerHTML = output;
             containerA.appendChild(div);
@@ -30,7 +33,9 @@ function fetchMovieA(pageA){
 
 window.addEventListener('onLoad', fetchMovieA());
 
-//이전 버튼
+
+
+// //이전 버튼
 const prevButtonA = document.querySelector(".prevA");
 prevButtonA.addEventListener('click', function(){
     if(pageA > 0){
@@ -43,10 +48,12 @@ prevButtonA.addEventListener('click', function(){
     console.log(pageA);
 });
 
+
+
 //다음 버튼  
 const moreButtonA = document.querySelector(".moreA");
 moreButtonA.addEventListener('click', function(){
-    if(pageA < 3){
+    if(pageA < 10){
         pageA += 1;
         fetchMovieA(pageA);
     } else {
@@ -57,18 +64,20 @@ moreButtonA.addEventListener('click', function(){
 });
 
 
-//현재상영화
+// 현재상영화
 function fetchMovieB(pageB){
     const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=ko-KR&page=${pageB}`;
     fetch(url)
     .then(res => res.json())
     .then(function(res){
-        const movies = res.results;
+        const movies = res.results.slice(0.,4);
         movies.map(function(movie){
             console.log(movie.title);
             const div = document.createElement('div');
             const output = `
                 <img src="${base_url + movie.poster_path}">
+                <h2>${movie.title}</h2>
+                <p class="release_date">${movie.release_date}</p>
             `;
             div.innerHTML = output;
             containerB.appendChild(div);
@@ -95,7 +104,7 @@ prevButtonB.addEventListener('click', function(){
 //다음 버튼  
 const moreButtonB = document.querySelector(".moreB");
 moreButtonB.addEventListener('click', function(){
-    if(pageB < 3){
+    if(pageB < 10){
         pageB += 1;
         fetchMovieB(pageB);
     } else {
@@ -106,18 +115,20 @@ moreButtonB.addEventListener('click', function(){
 });
 
 
-//개봉예정영화
+// 개봉예정영화
 function fetchMovieC(pageC){
     const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=ko-KR&page=${pageC}`;
     fetch(url)
     .then(res => res.json())
     .then(function(res){
-        const movies = res.results;
+        const movies = res.results.slice(0.,4);
         movies.map(function(movie){
             console.log(movie.title);
             const div = document.createElement('div');
             const output = `
                 <img src="${base_url + movie.poster_path}">
+                <h2>${movie.title}</h2>
+                <p class="release_date">${movie.release_date}</p>
             `;
             div.innerHTML = output;
             containerC.appendChild(div);
@@ -144,7 +155,7 @@ prevButtonC.addEventListener('click', function(){
 //다음 버튼  
 const moreButtonC = document.querySelector(".moreC");
 moreButtonC.addEventListener('click', function(){
-    if(pageC < 3){
+    if(pageC < 10){
         pageC += 1;
         fetchMovieC(pageC);
     } else {

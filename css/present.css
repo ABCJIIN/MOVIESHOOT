@@ -31,7 +31,7 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 22px;
     color: rgb(255, 255, 255);
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(20, 20, 20);
 }
 
 .presentPage .presentPage__content {
@@ -41,7 +41,7 @@
     top: 120px;
     width: 100%;
     /* height: 600px; */
-    background: rgb(35, 35, 35);
+    background: rgb(20, 20, 20);
 }
 
 .containerE {
@@ -61,8 +61,39 @@
     transition: all 0.2s linear;
 }
 
+.containerE > div > h2 {
+    color: white;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: none;
+}
+
+.containerE > div > p {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    display: none;
+}
+
 .containerE > div:hover {
     transform: scale(1.2);
+}
+
+.containerE > div:hover > img {
+    opacity: 20%;
+}
+
+.containerE > div:hover > h2 {
+    display: block;
+}
+
+.containerE > div:hover > p {
+    display: block;
 }
 
 .buttonWrapper {
@@ -119,7 +150,7 @@
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 25px;
         color: rgb(255, 255, 255);
-        background-color: rgb(35, 35, 35);
+        background-color: rgb(20, 20, 20);
     }
 
 }

@@ -27,7 +27,7 @@
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: 22px;
     color: rgb(255, 255, 255);
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(20, 20, 20);
 }
 
 .popularPage .popularPage__content {
@@ -36,7 +36,7 @@
     position: absolute;
     top: 120px;
     width: 100%;
-    background: rgb(35, 35, 35);
+    background: rgb(20, 20, 20);
 }
 
 .containerD {
@@ -56,8 +56,39 @@
     transition: all 0.2s linear;
 }
 
+.containerD > div > h2 {
+    color: white;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: none;
+}
+
+.containerD > div > p {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    display: none;
+}
+
 .containerD > div:hover {
     transform: scale(1.2);
+}
+
+.containerD > div:hover > img {
+    opacity: 20%;
+}
+
+.containerD > div:hover > h2 {
+    display: block;
+}
+
+.containerD > div:hover > p {
+    display: block;
 }
 
 .buttonWrapper {
@@ -95,30 +126,6 @@
     transform: translateY(-7px);
 }
 
-
-#overlay{
-    position: fixed;
-    top:0; left:0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 999;
-    /* 시작시 보이지 않게 처리 */
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.5s;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 오버레이를 보여 줄때 사용 */
-#overlay.show {
-    visibility: visible;
-    opacity: 1;
-}
-
 .nextClose {
     position: absolute;
     top:10px; right: 10px;
@@ -126,21 +133,6 @@
     margin:0; padding: 0;
     cursor: pointer;
     margin: 8px auto;
-}
-
-
-.youtube{
-    width: 60%;
-    height: 60%;
-}
-
-iframe{
-    display: block;
-    width: 100%;
-}
-
-.noVideo {
-    color: white;
 }
 
 /* 테블릿: 767px 이상*/
@@ -155,7 +147,7 @@ iframe{
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-size: 25px;
         color: rgb(255, 255, 255);
-        background-color: rgb(35, 35, 35);
+        background-color: rgb(20, 20, 20);
     }
 
 }

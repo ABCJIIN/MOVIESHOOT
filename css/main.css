@@ -120,19 +120,20 @@ section .con {
     height: 600px;
 }
 
-.popular h1 {
+.popular h1 > a {
     display: inline-block;
     position: absolute;
     height: 50px;
     line-height: 80px;
     left: 5px;
+    text-decoration: none;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: white;
 }
 
-.popular h1 > i {
+.popular h1 > a > i {
     position: relative;
     left: 10px;
     bottom: -1px;
@@ -164,8 +165,39 @@ section .con {
     transition: all 0.2s linear;
 }
 
+.containerA > div > h2 , .containerB > div > h2, .containerC > div > h2 {
+    color: white;
+    font-size: 20px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    display: none;
+}
+
+.containerA > div > p , .containerB > div > p , .containerC > div > p {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    display: none;
+}
+
 .containerA > div:hover, .containerB > div:hover, .containerC > div:hover {
     transform: scale(1.2);
+}
+
+.containerA > div:hover > img , .containerB > div:hover > img , .containerC > div:hover > img {
+    opacity: 20%;
+}
+
+.containerA > div:hover > h2 , .containerB > div:hover > h2 , .containerC > div:hover > h2 {
+    display: block;
+}
+
+.containerA > div:hover > p , .containerB > div:hover > p , .containerC > div:hover > p {
+    display: block;
 }
 
 .prevA, .prevB, .prevC {
@@ -232,19 +264,20 @@ section .con {
     height: 600px;
 }
 
-.present h1 {
+.present h1 > a {
     display: inline-block;
     position: absolute;
     height: 50px;
     line-height: 80px;
     left: 5px;
+    text-decoration: none;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: white;
 }
 
-.present h1 > i {
+.present h1 > a > i {
     position: relative;
     left: 10px;
     bottom: -1px;
@@ -264,19 +297,20 @@ section .con {
     height: 600px;
 }
 
-.schedule h1 {
+.schedule h1 > a {
     display: inline-block;
     position: absolute;
     height: 50px;
     line-height: 80px;
     left: 5px;
+    text-decoration: none;
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-weight: 500;
     font-size: 20px;
     color: white;
 }
 
-.schedule h1 > i {
+.schedule h1 > a > i {
     position: relative;
     left: 10px;
     bottom: -1px;
@@ -360,7 +394,7 @@ section .con {
         width: 95%;
     }
 
-    .popular h1, .present h1, .schedule h1 {
+    .popular h1 > a, .present h1 > a, .schedule h1 > a {
         font-size: 23px;
     }
 
