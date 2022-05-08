@@ -5,6 +5,10 @@
 
 /* 모바일: 0~766px*/
 
+html {
+    background-color: rgb(20, 20, 20);
+}
+
 .pageWrap {
     background: rgb(243, 183, 230);
     margin: 0 auto;
