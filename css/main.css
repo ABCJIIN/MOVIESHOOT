@@ -1,33 +1,33 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&display=swap");
 @import url(./reset.css);
 
 /* 모바일: 0~766px*/
 
 html,
 body {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 
 body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 .wrap {
-    background: rgb(20, 20, 20);
-    margin: 0 auto;
-    /* position: relative; */
-    /* box-sizing: border-box;   */
+  background: rgb(20, 20, 20);
+  margin: 0 auto;
+  /* position: relative; */
+  /* box-sizing: border-box;   */
 }
 
-  /* .wrap * {
+/* .wrap * {
     box-sizing: inherit;
 } */
 
@@ -37,380 +37,402 @@ body {
 } */
 
 section .con {
-    max-width: 1440px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .slider {
-    position: relative;
-    top: 60px;
-    background: rgb(20, 20, 20);
-    width: 100%;
-    padding-bottom: 100px;
+  position: relative;
+  top: 60px;
+  background: rgb(20, 20, 20);
+  width: 100%;
+  padding-bottom: 100px;
 }
 
 .slider h1 {
-    display: inline-block;
-    position: relative;
-    height: 100px;
-    line-height: 160px;
-    left: 5px;
-    font-size: 20px;
-    font-family: 'Nunito Sans', sans-serif;
-    color: white;
+  display: inline-block;
+  position: relative;
+  height: 100px;
+  line-height: 160px;
+  left: 5px;
+  font-size: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
 }
 
 .slider .slider__content {
-    position: relative;
-    width: 100%;
-
+  position: relative;
+  width: 100%;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    width: 40px;
-    height: 40px;
-    background-size: 100% auto;
+  width: 40px;
+  height: 40px;
+  background-size: 100% auto;
 }
 
 .swiper-button-prev {
-    background-image: url(../img/left.png);
-    z-index: 1;
+  background-image: url(../img/left.png);
+  z-index: 1;
 }
 .swiper-button-next {
-    background-image: url(../img/right.png);
-    z-index: 1;
+  background-image: url(../img/right.png);
+  z-index: 1;
 }
 
 .swiper-slide .video-container {
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
 }
 .swiper-slide .video-container iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
   /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .popular {
-    position: relative;
-    height: 600px;
+  position: relative;
+  height: 600px;
 }
 
 .popular h1 > a {
-    display: inline-block;
-    position: absolute;
-    height: 50px;
-    line-height: 80px;
-    left: 5px;
-    text-decoration: none;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  line-height: 80px;
+  left: 5px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
 }
 
 .popular h1 > a > i {
-    position: relative;
-    left: 10px;
-    bottom: -1px;
+  position: relative;
+  left: 10px;
+  bottom: -1px;
 }
 
 .popular .popular__content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    height: 500px;
-    background: rgb(20, 20, 20);
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 500px;
+  background: rgb(20, 20, 20);
 }
 
-.containerA, .containerB, .containerC {
-    display: flex;
-    flex-flow: row;
-    justify-items: center;
-    justify-content: center;
-    overflow: hidden;
+.containerA,
+.containerB,
+.containerC {
+  display: flex;
+  flex-flow: row;
+  justify-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.containerA > div, .containerB > div, .containerC > div {
-    flex-basis:  25%;
-    flex : 0;
-    margin: 8px;
-    padding: 8px;
-    cursor: pointer;
-    box-sizing: border-box;
-    transition: all 0.2s linear;
+.containerA > div,
+.containerB > div,
+.containerC > div {
+  flex-basis: 25%;
+  flex: 0;
+  margin: 8px;
+  padding: 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
 }
 
-.containerA > div > h2 , .containerB > div > h2, .containerC > div > h2 {
-    color: white;
-    font-size: 20px;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    display: none;
+.containerA > div > h2,
+.containerB > div > h2,
+.containerC > div > h2 {
+  color: white;
+  font-size: 20px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  display: none;
 }
 
-.containerA > div > p , .containerB > div > p , .containerC > div > p {
-    color: white;
-    font-size: 14px;
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    display: none;
+.containerA > div > p,
+.containerB > div > p,
+.containerC > div > p {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  display: none;
 }
 
-.containerA > div:hover, .containerB > div:hover, .containerC > div:hover {
-    transform: scale(1.2);
+.containerA > div:hover,
+.containerB > div:hover,
+.containerC > div:hover {
+  transform: scale(1.2);
 }
 
-.containerA > div:hover > img , .containerB > div:hover > img , .containerC > div:hover > img {
-    opacity: 20%;
+.containerA > div:hover > img,
+.containerB > div:hover > img,
+.containerC > div:hover > img {
+  opacity: 20%;
 }
 
-.containerA > div:hover > h2 , .containerB > div:hover > h2 , .containerC > div:hover > h2 {
-    display: block;
+.containerA > div:hover > h2,
+.containerB > div:hover > h2,
+.containerC > div:hover > h2 {
+  display: block;
 }
 
-.containerA > div:hover > p , .containerB > div:hover > p , .containerC > div:hover > p {
-    display: block;
+.containerA > div:hover > p,
+.containerB > div:hover > p,
+.containerC > div:hover > p {
+  display: block;
 }
 
-.prevA, .prevB, .prevC {
-    width: 80px;
-    height: 80px;
-    padding: 8px 15px;
-    margin: 40px auto 60px auto;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    bottom: 150px;
-    left: 20px;
+.prevA,
+.prevB,
+.prevC {
+  width: 80px;
+  height: 80px;
+  padding: 8px 15px;
+  margin: 40px auto 60px auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  bottom: 150px;
+  left: 20px;
 }
 
-.prevA:hover .prevB:hover, .prevC:hover {
-    background-color: #e5312e;
-    box-shadow: 0px 15px 20px rgba(148, 6, 6, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
+.prevA:hover .prevB:hover,
+.prevC:hover {
+  background-color: #e5312e;
+  box-shadow: 0px 15px 20px rgba(148, 6, 6, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
-.moreA, .moreB, .moreC {
-    width: 80px;
-    height: 80px;
-    padding: 8px 15px;
-    margin: 40px auto 60px auto;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    bottom: 150px;
-    right: 20px;
+.moreA,
+.moreB,
+.moreC {
+  width: 80px;
+  height: 80px;
+  padding: 8px 15px;
+  margin: 40px auto 60px auto;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  bottom: 150px;
+  right: 20px;
 }
 
-.moreA:hover, .moreB:hover, .moreC:hover {
-    background-color: #e5312e;
-    box-shadow: 0px 15px 20px rgba(148, 6, 6, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
+.moreA:hover,
+.moreB:hover,
+.moreC:hover {
+  background-color: #e5312e;
+  box-shadow: 0px 15px 20px rgba(148, 6, 6, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
 .present {
-    position: relative;
-    /* background: plum; */
-    height: 600px;
+  position: relative;
+  /* background: plum; */
+  height: 600px;
 }
 
 .present h1 > a {
-    display: inline-block;
-    position: absolute;
-    height: 50px;
-    line-height: 80px;
-    left: 5px;
-    text-decoration: none;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  line-height: 80px;
+  left: 5px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
 }
 
 .present h1 > a > i {
-    position: relative;
-    left: 10px;
-    bottom: -1px;
+  position: relative;
+  left: 10px;
+  bottom: -1px;
 }
 
 .present .present__content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    height: 500px;
-    /* background: rgb(154, 222, 76); */
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 500px;
+  /* background: rgb(154, 222, 76); */
 }
 
 .schedule {
-    position: relative;
-    /* background: rgb(140, 135, 235); */
-    height: 600px;
+  position: relative;
+  /* background: rgb(140, 135, 235); */
+  height: 600px;
 }
 
 .schedule h1 > a {
-    display: inline-block;
-    position: absolute;
-    height: 50px;
-    line-height: 80px;
-    left: 5px;
-    text-decoration: none;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  line-height: 80px;
+  left: 5px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
 }
 
 .schedule h1 > a > i {
-    position: relative;
-    left: 10px;
-    bottom: -1px;
+  position: relative;
+  left: 10px;
+  bottom: -1px;
 }
 
 .schedule .schedule__content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-    height: 500px;
-    /* background: rgb(222, 76, 76); */
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 500px;
+  /* background: rgb(222, 76, 76); */
 }
 
-
 /* 테블릿: 767px 이상*/
-@media all and (min-width:767px) {
-    
-    .slider {
-        margin: 0 auto;
-        width: 80%;
-        top: 0px;
-        padding-top: 50px;
-        padding-bottom: 80px
-        /* height: 500px; */
-    }
+@media all and (min-width: 767px) {
+  .slider {
+    margin: 0 auto;
+    width: 80%;
+    top: 0px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    /* height: 500px; */
+  }
 
-    .slider h1 {
-        height: 50px;
-        line-height: 50px;
-        font-size: 22px;
-    }
+  .slider h1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+  }
 
-
-    /* .slider .slider__content {
+  /* .slider .slider__content {
         width: 90%;
     } */
 
+  .popular,
+  .present,
+  .schedule {
+    margin: 0 auto;
+    width: 95%;
+  }
 
-    .popular, .present, .schedule {
-        margin: 0 auto;
-        width: 95%;
-    }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px;
+    height: 50px;
+  }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        width: 50px;
-        height: 50px;
-    }
+  .swiper-button-prev {
+    position: absolute;
+    left: -60px;
+  }
 
-    .swiper-button-prev {
-        position: absolute;
-        left: -60px;
-    }
-
-    .swiper-button-next {
-        position: absolute;
-        right: -60px;
-    }
-
+  .swiper-button-next {
+    position: absolute;
+    right: -60px;
+  }
 }
 
 /* pc: 1024px 이상 */
-@media all and (min-width:1024px) {
-
-    /* .slider {
+@media all and (min-width: 1024px) {
+  /* .slider {
         height: 700px;
     } */
 
-    .slider {
-        padding-bottom: 100px
-    }
+  .slider {
+    padding-bottom: 100px;
+  }
 
-    .slider h1 {
-        height: 50px;
-        line-height: 50px;
-        font-size: 25px;
-    }
+  .slider h1 {
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+  }
 
-    .popular, .present, .schedule {
-        margin: 0 auto;
-        width: 95%;
-    }
+  .popular,
+  .present,
+  .schedule {
+    margin: 0 auto;
+    width: 95%;
+  }
 
-    .popular h1 > a, .present h1 > a, .schedule h1 > a {
-        font-size: 23px;
-    }
+  .popular h1 > a,
+  .present h1 > a,
+  .schedule h1 > a {
+    font-size: 23px;
+  }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        width: 70px;
-        height: 70px;
-    }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 70px;
+    height: 70px;
+  }
 
-    .swiper-button-prev {
-        position: absolute;
-        left: -100px;
-    }
+  .swiper-button-prev {
+    position: absolute;
+    left: -100px;
+  }
 
-    .swiper-button-next {
-        position: absolute;
-        right: -100px;
-    }
+  .swiper-button-next {
+    position: absolute;
+    right: -100px;
+  }
 }
