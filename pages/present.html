@@ -55,21 +55,18 @@
                 <div class="buttonWrapper">
                     <button class="more">more</button>
                 </div>
-                <div id="overlay">
-                    <div class="photo"></div>
-                    <button class="nextClose">
-                        <i class="fas fa-times fa-lg"></i>
-                    </button>
             </div>
         </section>
     </main>
     <footer class="footer"></footer>
+
     <script src="../js/common.js"></script>
     <script>
         let page = 1;
         const key = "26e37826233bf74e2ff5973dabc4d65b";
         const base_url = "https://image.tmdb.org/t/p/w300/";
         const container = document.querySelector(".containerE");
+        const movieTitle = document.querySelector(".movieTitle");
         
         function fetchMovie(page){
             const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=ko-KR&page=${page}`;
@@ -107,22 +104,6 @@
             console.log(page);
         });
 
-        const overlay = document.querySelector("#overlay");
-        const photoCon = document.querySelector(".photo");
-        const closeButton = document.querySelector("nextClose");
-
-        function showBic(e){//e에 클릭한 DOM 정보가 전달되어 온다.
-            const orgImage = e.querySelector("img").src;
-            const output = `<img src="${orgImage}"><p>${e.querySelector("p").innerHTML}</p>`;
-            photoCon.innerHTML = output;
-            overlay.classList.add("show");
-        };
-
-
-        // 클로즈 버튼을 클릭하면 오버레이 show 클래스를 삭제해서 오버레이를 사라지게 함
-        closeButton.addEventListener('click', () => {
-            overlay.classList.remove("show");
-        });
     </script>
 </body>
 </html>
