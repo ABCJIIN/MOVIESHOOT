@@ -92,7 +92,6 @@
         
         window.addEventListener('onLoad', fetchMovie());
         
-        //더보기 버튼 클릭 리스너    
         const moreButton = document.querySelector(".more");
         moreButton.addEventListener('click', function(){
             if(page < 4){
@@ -101,8 +100,6 @@
             } else {
                 this.disabled = true;
             }
-            
-            // console.log(page);
         });
     </script>
 </body>

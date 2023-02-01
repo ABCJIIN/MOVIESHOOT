@@ -23,18 +23,7 @@ body {
 .wrap {
     background: rgb(20, 20, 20);
     margin: 0 auto;
-    /* position: relative; */
-    /* box-sizing: border-box;   */
 }
-
-  /* .wrap * {
-    box-sizing: inherit;
-} */
-
-/* .slider, .popular, .present, .schedule {
-    max-width: 1440px;
-    margin: 0 auto;
-} */
 
 section .con {
     max-width: 1440px;
@@ -63,29 +52,33 @@ section .con {
 .slider .slider__content {
     position: relative;
     width: 100%;
+}
 
+.slider .slider__content #video-swiper {
+    border-radius: 10px;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
     width: 40px;
     height: 40px;
-    background-size: 100% auto;
+    z-index: 1;
+    background-size: contain;
 }
 
 .swiper-button-prev {
-    background-image: url(../img/left.png);
-    z-index: 1;
+    background-image: url(../img/prev.png); 
 }
 .swiper-button-next {
-    background-image: url(../img/right.png);
-    z-index: 1;
+    background-image: url(../img/next.png);
 }
 
 .swiper-slide .video-container {
     width: 100%;
     position: relative;
     padding-bottom: 56.25%;
+    
+    
 }
 .swiper-slide .video-container iframe {
     position: absolute;
@@ -96,6 +89,7 @@ section .con {
 }
 
 .swiper-slide {
+    
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -201,28 +195,27 @@ section .con {
 }
 
 .prevA, .prevB, .prevC {
-    width: 80px;
-    height: 80px;
-    padding: 8px 15px;
-    margin: 40px auto 60px auto;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 212px;
+    left: 0px;
+    border-radius: 50%;
+    background-color: rgb(34, 34, 34);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    border: none;
     outline: none;
-    position: absolute;
-    bottom: 150px;
-    left: 20px;
 }
 
-.prevA:hover .prevB:hover, .prevC:hover {
+.prevA img, .prevB img, .prevC img {
+    height: 35px;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+.prevA:hover, .prevB:hover, .prevC:hover {
     background-color: #e5312e;
     box-shadow: 0px 15px 20px rgba(148, 6, 6, 0.4);
     color: #fff;
@@ -230,25 +223,24 @@ section .con {
 }
 
 .moreA, .moreB, .moreC {
-    width: 80px;
-    height: 80px;
-    padding: 8px 15px;
-    margin: 40px auto 60px auto;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 212px;
+    right: 0px;
+    border-radius: 50%;
+    background-color: rgb(34, 34, 34);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
+    border: none;
     outline: none;
-    position: absolute;
-    bottom: 150px;
-    right: 20px;
+}
+
+.moreA img, .moreB img, .moreC img {
+    height: 35px;
+    margin-top: 3px;
+    margin-left: 3px;
 }
 
 .moreA:hover, .moreB:hover, .moreC:hover {
@@ -260,7 +252,6 @@ section .con {
 
 .present {
     position: relative;
-    /* background: plum; */
     height: 600px;
 }
 
@@ -288,12 +279,10 @@ section .con {
     top: 50px;
     width: 100%;
     height: 500px;
-    /* background: rgb(154, 222, 76); */
 }
 
 .schedule {
     position: relative;
-    /* background: rgb(140, 135, 235); */
     height: 600px;
 }
 
@@ -321,7 +310,6 @@ section .con {
     top: 50px;
     width: 100%;
     height: 500px;
-    /* background: rgb(222, 76, 76); */
 }
 
 
@@ -334,7 +322,6 @@ section .con {
         top: 0px;
         padding-top: 50px;
         padding-bottom: 80px
-        /* height: 500px; */
     }
 
     .slider h1 {
@@ -342,12 +329,6 @@ section .con {
         line-height: 50px;
         font-size: 22px;
     }
-
-
-    /* .slider .slider__content {
-        width: 90%;
-    } */
-
 
     .popular, .present, .schedule {
         margin: 0 auto;
@@ -375,10 +356,6 @@ section .con {
 /* pc: 1024px 이상 */
 @media all and (min-width:1024px) {
 
-    /* .slider {
-        height: 700px;
-    } */
-
     .slider {
         padding-bottom: 100px
     }
@@ -395,22 +372,22 @@ section .con {
     }
 
     .popular h1 > a, .present h1 > a, .schedule h1 > a {
-        font-size: 23px;
+        margin-left: 65px;
+        font-size: 22px;
     }
 
     .swiper-button-prev,
     .swiper-button-next {
+        position: absolute;
         width: 70px;
         height: 70px;
     }
 
     .swiper-button-prev {
-        position: absolute;
         left: -100px;
     }
 
     .swiper-button-next {
-        position: absolute;
         right: -100px;
     }
 }

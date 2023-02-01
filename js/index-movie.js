@@ -15,7 +15,7 @@ function fetchMovieA(pageA){
     fetch(url)
     .then(res => res.json())
     .then(function(res){
-        const movies = res.results.slice(0.,4);
+        const movies = res.results.slice(0,4);
         movies.map(function(movie){
             console.log(movie.title);
             const div = document.createElement('div');
@@ -70,7 +70,7 @@ function fetchMovieB(pageB){
     fetch(url)
     .then(res => res.json())
     .then(function(res){
-        const movies = res.results.slice(0.,4);
+        const movies = res.results.slice(0,4);
         movies.map(function(movie){
             console.log(movie.title);
             const div = document.createElement('div');
@@ -121,7 +121,7 @@ function fetchMovieC(pageC){
     fetch(url)
     .then(res => res.json())
     .then(function(res){
-        const movies = res.results.slice(0.,4);
+        const movies = res.results.slice(0,4);
         movies.map(function(movie){
             console.log(movie.title);
             const div = document.createElement('div');

@@ -55,11 +55,6 @@
                 <div class="buttonWrapper">
                     <button class="more">more</button>
                 </div>
-                <div id="overlay">
-                    <div class="photo"></div>
-                    <button class="nextClose">
-                        <i class="fas fa-times fa-lg"></i>
-                    </button>
             </div>
         </section>
     </main>
@@ -94,7 +89,6 @@
         
         window.addEventListener('onLoad', fetchMovie());
         
-        //더보기 버튼 클릭 리스너    
         const moreButton = document.querySelector(".more");
         moreButton.addEventListener('click', function(){
             if(page < 4){
@@ -103,25 +97,7 @@
             } else {
                 this.disabled = true;
             }
-            
             console.log(page);
-        });
-
-        const overlay = document.querySelector("#overlay");
-        const photoCon = document.querySelector(".photo");
-        const closeButton = document.querySelector("nextClose");
-
-        function showBic(e){//e에 클릭한 DOM 정보가 전달되어 온다.
-            const orgImage = e.querySelector("img").src;
-            const output = `<img src="${orgImage}"><p>${e.querySelector("p").innerHTML}</p>`;
-            photoCon.innerHTML = output;
-            overlay.classList.add("show");
-        };
-
-
-        // 클로즈 버튼을 클릭하면 오버레이 show 클래스를 삭제해서 오버레이를 사라지게 함
-        closeButton.addEventListener('click', () => {
-            overlay.classList.remove("show");
         });
     </script>
 </body>
