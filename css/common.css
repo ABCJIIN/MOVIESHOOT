@@ -8,12 +8,12 @@
     position: fixed;
     width: 100%;
     z-index: 2;
-    background: rgb(20, 20, 20);
+    background: #000000;
 }
 
 .header a {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-size: 18px;
 }
 
@@ -23,32 +23,24 @@
     width: 100%;
     height: 100%;
     line-height: 100%;
-    background: rgb(31, 31, 31);
+    background: #000000;
+    z-index: 10;
 }
 
-.header__Mnav > .trigger {
-    height: 60px;
-    background-color: rgb(30, 30, 30);
+.header__Mnav .trigger {
     position: relative;
-    z-index: 2;
+    height: 60px;
 }
 
-.header__Mnav > .trigger > .close > i {
-    color: white;
-}
-
-.mobile {
+.header__Mnav .trigger .mobile {
+    position: absolute;
+    left: 14px;
+    top: 20px;
     border: 0;
     outline: 0;
-    background-color: transparent;
-}
-
-.header__Mnav > .trigger > .mobile.close {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	font-size: 1.2rem;
-    z-index: 2;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 .header__Mnav > .Mmenu {
@@ -62,18 +54,19 @@
 }
 
 .header__Mnav .Mmenu__main > li {
+    margin-right: 20px;
     padding: 20px 0;
-    border-bottom: 1px solid grey;
+    border-bottom: 2px solid #acacac;
     position: relative;
-    font-size: 1.3rem;
-    font-family: 'IBM Plex Sans KR', sans-serif;
-    font-weight: 300;
 }
 
 .header__Mnav .Mmenu__main > li > a {
     display: inline-block;
     padding: 15px 0;
     position: relative;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 300;
 }
 
 .header__Mnav .Mmenu__main > li > a:after {
@@ -82,7 +75,7 @@
     content: "";
     display: block;
     height: 3px;
-    border-radius: 5px;
+    border-radius: 2px;
     left: 50%;
     position: absolute;
     background: #e80000;
@@ -100,75 +93,123 @@
 }
 
 .header__nav {
-    max-width: 1440px; 
+    max-width: 1400px; 
     height: 60px;
-    background: rgb(20, 20, 20);
+    background: #000000;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
 }
 
-.header__nav > h1 {
-    text-align: center;
+.header__nav .header__nav__left {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
-.header__nav > h1 > a > img {
-    width: 70px;
+.header__nav .header__nav__left h1 a img {
+    width: 60px;
 }
 
-.header__nav > .trigger > .hamburger > i {
-    color: white;
+.header__nav  .header__nav__left .trigger {
     margin-left: 10px;
-    margin-top: 20px;
 }
 
-.header__nav > .search {
-    text-align: center;
-    position: absolute;
-    right: 0px;
+.header__nav  .header__nav__left .trigger .hamburger {
+    background: #000000;
 }
 
-.header__nav > .search > input {
-    width: 300px;
-    height: 30px;
-    border-radius: 20px;
-    background: rgb(20, 20, 20);
+.header__nav  .header__nav__left .trigger .hamburger  i {
     color: white;
+    font-size: 16px;
+}
+
+.header__nav  .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+}
+
+.header__nav  .search  input {
     position: absolute;
-    top: 0px;
-    right: 0;
-    padding-left: 20px;
-    border: 0 solid black;
+    right: 10px;
+    width: 200px;
+    height: 25px;
+    border-radius: 20px;
+    font-size: 10px;
+    background: #000000;
+    color: #ffffff;
+    border: 0;
     display: none;
 }
 
-.header__nav > .search:hover > input {
+.header__nav  .search:hover  input {
+    border: 1px solid #ffffff;
     display: block;
-    border: 1px solid rgb(255, 255, 255);
 }
 
-
-.header__nav > .search > i {
-    display: inline;
-    font-size: 20px;
-    color: white;
-    margin-left: 25px;
+.header__nav .search i {
+    color: #ffffff;
     position: relative;
-    top: 7px;
+    font-size: 16px;
     right: 20px;
     cursor: pointer;
 }
 
-.header__nav .menu__main {
+.header__nav .menu {
     display: none;
 }
 
 .header__nav .menu__main li {
     cursor: pointer;
 }
+
+.footer {
+    width: 100%;
+    background: #000000;
+}
+
+.footer .footer_inner {
+    width: 1000px;
+    margin: 0 auto;
+    color: #ffffff;
+    padding-top: 130px;
+    padding-bottom: 50px;
+    padding-left: 120px;
+}
+
+.footer .footer_inner p:nth-of-type(1) {
+    font-size: 16px;
+}
+
+.footer .footer_inner ul {
+    height: 280px;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.footer .footer_inner ul li {
+    line-height: 70px;
+    float: left;
+    width: 25%;
+    font-size: 13px;
+}
+
+.footer .footer_inner p:nth-of-type(2) {
+    font-size: 14px;
+    padding: 30px 0;
+}
+
+.footer .footer_inner p:nth-of-type(3) {
+    font-size: 12px;
+    line-height: 130%;
+}
+
+
+
+
 
 
 /* 테블릿: 767px 이상*/
@@ -178,106 +219,107 @@
         position: static;
     }
 
-    .header__nav {
-        height: 120px;
-    }
-
     .header__Mnav {
         display: none;
     }
 
-    .header__nav > h1 {
-    width: 200px;
-    height: 120px;
-    line-height: 120px;
+    .header__nav .trigger {
+		display: none;
+	}
+
+    .header__nav {
+        height: 90px;
+        padding-top: 10px;
+    }
+
+    .header__nav .header__nav__left h1 a img {
+        width: 70px;
+    }
+
+    .header__nav  .search  input {
+        width: 300px;
+        height: 30px;
+        font-size: 12px;
     }
     
-    .header__nav > h1 > a > img {
-        width: 90px;
-        vertical-align: middle;
+    .header__nav .search i {
+        font-size: 18px;
     }
 
-    .header__nav > .menu {
-        width: calc(100% - 100px);
+    .header__nav .menu {
+        display: block;
+        margin-left: 35px;
+    }
+
+    .header__nav .menu .menu__main {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 120px;
     }
 
-    .header__nav .menu__main {
-        display: flex;
-        flex-direction: row;
+    .header__nav .menu .menu__main li {
+        margin-right: 20px;
     }
 
-    .header__nav > .menu > nav > .menu__main > li {
-        padding: 0 10px;
-        margin: 0 0 0 10px;
+    .header__nav .menu .menu__main li a {
         font-family: 'IBM Plex Sans KR', sans-serif;
         font-weight: 300;
-    }
-
-    .header__nav .menu__main > li > a {
+        font-size: 15px;
         display: inline-block;
         padding: 15px 0;
         position: relative;
     }
-    
-    .header__nav .menu__main > li > a:after {
+
+    .header__nav .menu .menu__main li a:after {
         background: none repeat scroll 0 0 transparent;
         bottom: 0;
         content: "";
         display: block;
-        height: 4px;
-        border-radius: 5px;
+        height: 3px;
+        border-radius: 2px;
         left: 50%;
         position: absolute;
         background: #e80000;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
     }
-    
-    .header__nav .menu__main > li > a:hover:after { 
+
+    .header__nav .menu .menu__main li a:hover:after {
         width: 100%; 
         left: 0; 
     }
 
-    .header__nav .menu__main > li > a:hover {
+    .header__nav .menu .menu__main li a:hover {
         font-weight: 500;
     }
-
-    .header__nav > .search {
-        height: 120px;
-        line-height: 120px;
-        right: 0;
-    }
-
-    .header__nav > .search > input {
-        width: 400px;
-        height: 40px;
-        border-radius: 40px;
-        top: 35px;
-        right: 50px;
-        border: 0 solid black;
-    }
-    
-    .header__nav > .search > i {
-        position: absolute;
-        top: 47px;
-        right: 70px;
-    }
-
-    .header__nav > .trigger {
-		display: none;
-	}
 
 }
 
 /* pc: 1024px 이상 */
 @media all and (min-width:1024px) {
 
-    .header__nav > .search {
-        right: 20px;
+    .header__nav {
+        height: 110px;
+        padding-top: 20px;
+    }
+
+    .header__nav .header__nav__left h1 a img {
+        width: 80px;
+    }
+
+    .header__nav  .search  input {
+        width: 400px;
+        height: 32px;
+    }
+
+    .header__nav .menu {
+        margin-left: 40px;
+    }
+
+    .header__nav .menu .menu__main li {
+        margin-right: 25px;
+    }
+
+    .header__nav .menu .menu__main li a {
+        font-size: 17px;
     }
 
 }

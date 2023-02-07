@@ -11,37 +11,28 @@
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
-        
-        html body main {
-            height: 100vh;
-        }
 
         .wrap {
             width: 100%;
-            background: rgb(29, 29, 29);
-            position: fixed;
-            overflow: hidden;
+            background: #000000;
         }
 
-        .wrap > .soon {
-            width: 400px;
-            height: 100px;
+        .wrap .soon {
+            width: 100%;
+            height: 500px;
+            color: #ffffff;
             text-align: center;
-            line-height: 100px;
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            margin-left: -200px;
-            font-family: 'Nunito Sans', sans-serif;
+            line-height: 500px;
             font-size: 50px;
-            color: white;
+            font-family: 'IBM Plex Sans KR', sans-serif;
+            font-weight: 500;
         }
 
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="header__Mnav">
+        <div class="header__Mnav animate__animated animate__slideInLeft">
             <div class="trigger">
                 <button class="mobile close"><i class="fas fa-times fa-lg"></i></button>
             </div>
@@ -55,31 +46,64 @@
             </nav>
         </div>
         <div class="header__nav">
-            <h1>
-                <a href="../index.html"><img src="../img/LOGO.png" alt="logo"></a>
-            </h1>
-            <div class="trigger">
-                <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
-            </div>
-            <div class="menu">
-                <nav>
-                    <ul class="menu__main">
-                        <li><a href="../index.html">홈</a></li>
-                        <li><a href="./popular.html">인기영화</a></li>
-                        <li><a href="./present.html">현재상영영화</a></li>
-                        <li><a href="./schedule.html">개봉예정영화</a></li>
-                    </ul>
-                </nav>
+            <div class="header__nav__left">
+                <h1>
+                    <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+                </h1>
+                <div class="trigger">
+                    <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="menu__main">
+                            <li><a href="../index.html">홈</a></li>
+                            <li><a href="./popular.html">인기영화</a></li>
+                            <li><a href="./present.html">현재상영영화</a></li>
+                            <li><a href="./schedule.html">개봉예정영화</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <form class="search">
-                <input type="text" placeholder="  제목을 입력하세요." autofocus></input><i class="fas fa-search"></i>
+                <input type="text" placeholder="&nbsp 제목을 입력하세요." autofocus></input><i class="fas fa-search"></i>
             </form>
         </div>
     </header>
     <main class="wrap">
         <div class="soon">coming soon...</div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer_inner">
+            <p>질문이 있으신가요? 문의 전화: 010-5120-7862</p>
+            <ul>
+                <li>자주 묻는 질문</li>
+                <li>고객센터</li>
+                <li>계정</li>
+                <li>미디어 센터</li>
+                <li>투자정보(IR)</li>
+                <li>입사 정보</li>
+                <li>무비슛 지원 디바이스</li>
+                <li>이용 약관</li>
+                <li>개인정보 처리방침</li>
+                <li>쿠키 설정</li>
+                <li>회사 정보</li>
+                <li>문의하기</li>
+                <li>속도 테스트</li>
+                <li>법적 고지</li>
+                <li>오직 무비슛에서</li>
+            </ul>
+            <p>무비슛 대한민국</p>
+            <p>
+                무비슛서비스코리아 유한회사 통신판매업신고번호: 제0000-인천계양-0000호 전화번호: 000-000-0000<br>
+                대표: 정지인<br>
+                이메일 주소: wldls0309@naver.com<br>
+                주소: 대한민국 인천광역시 계양구 0000로 00, 0동 0층 우편번호 00000<br>
+                사업자등록번호: 000-00-00000<br>
+                클라우드 호스팅: Amazon Web Services Inc.<br>
+                공정거래위원회 웹사이트
+                </p>
+        </div>
+    </footer>
     <script src="../js/common.js"></script>
 </body>
 </html>

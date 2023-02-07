@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./library/swiper5/swiper.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
     <header class="header">
@@ -27,24 +28,26 @@
             </nav>
         </div>
         <div class="header__nav">
-            <h1>
-                <a href="./index.html"><img src="./img/LOGO.png" alt="logo"></a>
-            </h1>
-            <div class="trigger">
-                <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
-            </div>
-            <div class="menu">
-                <nav>
-                    <ul class="menu__main">
-                        <li><a href="./index.html">홈</a></li>
-                        <li><a href="./pages/popular.html">인기영화</a></li>
-                        <li><a href="./pages/present.html">현재상영영화</a></li>
-                        <li><a href="./pages/soon.html">개봉예정영화</a></li>
-                    </ul>
-                </nav>
+            <div class="header__nav__left">
+                <h1>
+                    <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+                </h1>
+                <div class="trigger">
+                    <button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="menu__main">
+                            <li><a href="./index.html">홈</a></li>
+                            <li><a href="./pages/popular.html">인기영화</a></li>
+                            <li><a href="./pages/present.html">현재상영영화</a></li>
+                            <li><a href="./pages/soon.html">개봉예정영화</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <form class="search">
-                <input type="text" placeholder="제목을 입력하세요." autofocus></input><i class="fas fa-search"></i>
+                <input type="text" placeholder="&nbsp 제목을 입력하세요." autofocus></input><i class="fas fa-search"></i>
             </form>
         </div>
     </header>
@@ -52,66 +55,338 @@
         <section class="main">
             <div class="main_content">
                 <div class="ifram_wrap">
-                    <iframe src="https://www.youtube.com/embed/wxN1T1uxQ2g?autoplay=1&mute=1&loop=1&playlist=wxN1T1uxQ2g&controls=0&modestbranding=1&rel=0&playsinline=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    <iframe src="https://www.youtube.com/embed/wxN1T1uxQ2g?autoplay=1&mute=1&loop=1&playlist=wxN1T1uxQ2g&controls=0&modestbranding=1&playsinline=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                         <p>현재 사용 중인 브라우저는 iframe 요소를 지원하지 않습니다!</p>
                     </iframe>
-                </div>
-                <div class="main_detail">
-                    <span>에브리씽</span>
-                    <span>에브리웨어</span>
-                    <span>올앳원스</span>
-                    <span>2022 ㆍ 15세 관람가 ㆍ 139분</span>
-                    <div class="btn_container">
-                        <button>▶&ensp;재생</button>
-                        <button>❤</button>
+                    <div class="main_detail">
+                        <span>에브리씽</span>
+                        <span>에브리웨어</span>
+                        <span>올앳원스</span>
+                        <span>2022 ㆍ 15세 관람가 ㆍ 139분</span>
+                        <div class="btn_container">
+                            <button>▶&ensp;재생</button>
+                            <button>❤</button>
+                        </div>
+                        <p>미국에 이민 와 힘겹게 세탁소를 운영하던 에블린은<br>
+                            세무당국의 조사에 시달리던 어느 날<br>
+                            남편의 이혼 요구와 삐딱하게 구는 딸로 인해 대혼란에 빠진다.</p>
                     </div>
-                    <p>미국에 이민 와 힘겹게 세탁소를 운영하던 에블린은<br>
-                        세무당국의 조사에 시달리던 어느 날<br>
-                        남편의 이혼 요구와 삐딱하게 구는 딸로 인해 대혼란에 빠진다.</p>
                 </div>
             </div>
         </section>
-        <section class="popular">
-            <h1><a href="./pages/popular.html">인기영화<i class="fas fa-chevron-right"></i></a></h1>
-            <div class="popular__content con">
-                <div onclick = 'window.location.href = "./pages/soon.html"'  class="containerA"></div>
-                <div class="prevButtonWrapper">
-                    <button class="prevA"><img src="./img/prev.png"></button>
+        <section class="top10">
+            <div class="top10_content">
+                <div class="top10_title">
+                    <h1>오늘의 TOP 10</h1>
                 </div>
-                <div class="moreButtonWrapper">
-                    <button class="moreA"><img src="./img/next.png"></button>
+                <div class="top10_slide">
+                    <div>
+                        <img src="./img/Where the Crawdads Sing.jpg" alt="movie poster">
+                        <div class="ranking">1</div>
+                        <div class="movie_title">가재가 노래하는 곳</div>
+                    </div>
+                    <div>
+                        <img src="./img/Spider-Man No Way Home.jpg" alt="movie poster">
+                        <div class="ranking">2</div>
+                        <div class="movie_title">스파이더맨: 노 웨이 홈</div>
+                    </div>
+                    <div>
+                        <img src="./img/The Night Owl.jpg" alt="movie poster">
+                        <div class="ranking">3</div>
+                        <div class="movie_title">올빼미</div>
+                    </div>
+                    <div>
+                        <img src="./img/Three Thousand Years of Longing.jpg" alt="movie poster">
+                        <div class="ranking">4</div>
+                        <div class="movie_title">3000년의 기다림</div>
+                    </div>
+                    <div>
+                        <img src="./img/THE MENU.jpg" alt="movie poster">
+                        <div class="ranking">5</div>
+                        <div class="movie_title">더 메뉴</div>
+                    </div>
+                    <div>
+                        <img src="./img/Decision To Leave.jpg" alt="movie poster">
+                        <div class="ranking">6</div>
+                        <div class="movie_title">헤어질 결심</div>
+                    </div>
+                    <div>
+                        <img src="./img/Puss in Boots The Last Wish.jpg" alt="movie poster">
+                        <div class="ranking">7</div>
+                        <div class="movie_title">장화신은 고양이: 끝내주는 모험</div>
+                    </div>
+                    <div>
+                        <img src="./img/Drive My Car.jpg" alt="movie poster">
+                        <div class="ranking">8</div>
+                        <div class="movie_title">드라이브 마이 카</div>
+                    </div>
+                    <div>
+                        <img src="./img/The Matrix Resurrections.jpg" alt="movie poster">
+                        <div class="ranking">9</div>
+                        <div class="movie_title">매트릭스: 리저렉션</div>
+                    </div>
+                    <div>
+                        <img src="./img/late spring.jpg" alt="movie poster">
+                        <div class="ranking">10</div>
+                        <div class="movie_title">봄</div>
+                    </div>
+                </div>
+                <div class="top10_btn_container">
+                    <button class="top10_btn " id="top10_prev"><img src="./img/prev.png" alt="prev button"></button>
+                    <button class="top10_btn " id="top10_next"><img src="./img/next.png" alt="next button"></button>
                 </div>
             </div>
         </section>
-        <section class="present">
-            <h1><a href="./pages/present.html">현재상영영화<i class="fas fa-chevron-right"></i></a></h1>
-            <div class="present__content con">
-                <div onclick = 'window.location.href = "./pages/soon.html"' class="containerB"></div>
-                <div class="prevButtonWrapper">
-                    <button class="prevB"><img src="./img/prev.png"></button>
+        <section class="lately">
+            <div class="lately_content">
+                <div class="lately_title">
+                    <h2>최근 인기 급상승</h2>
                 </div>
-                <div class="moreButtonWrapper">
-                    <button class="moreB"><img src="./img/next.png"></button>
+                <div class="lately_slide">
+                    <div>
+                        <img src="./img/Everything Everywhere All At Once.jpg">
+                        <div class="movie_title">에브리씽 에브리웨어 올 앳 원스</div>
+                    </div>
+                    <div>
+                        <img src="./img/Big Fish.jpg">
+                        <div class="movie_title">빅 피쉬</div>
+                    </div>
+                    <div>
+                        <img src="./img/Cinema Paradiso.jpg">
+                        <div class="movie_title">시네마 천국</div>
+                    </div>
+                    <div>
+                        <img src="./img/The Truman Show.jpg">
+                        <div class="movie_title">트루먼 쇼</div>
+                    </div>
+                    <div>
+                        <img src="./img/Farewell My Concubine.jpg">
+                        <div class="movie_title">패왕별희</div>
+                    </div>
+                </div>
+                <div class="lately_btn_container">
+                    <button class="lately_btn " id="lately_prev"><img src="./img/prev.png" alt="prev button"></button>
+                    <button class="lately_btn " id="lately_next"><img src="./img/next.png" alt="next button"></button>
                 </div>
             </div>
         </section>
-        <section class="schedule">
-            <h1><a href="./pages/schedule.html">개봉예정영화<i class="fas fa-chevron-right"></i></a></h1>
-            <div class="schedule__content con">
-                <div onclick = 'window.location.href = "./pages/soon.html"' class="containerC"></div>
-                <div class="prevButtonWrapper">
-                    <button class="prevC"><img src="./img/prev.png"></button>
+        <section class="award">
+            <div class="award_content">
+                <div class="award_title">
+                    <h3>어워드 수상 영화</h3>
                 </div>
-                <div class="moreButtonWrapper">
-                    <button class="moreC"><img src="./img/next.png"></button>
+                <div class="award_slide">
+                    <div>
+                        <img src="./img/Green Book.jpg">
+                        <div class="movie_title">그린 북</div>
+                    </div>
+                    <div>
+                        <img src="./img/Minari.jpg">
+                        <div class="movie_title">미나리</div>
+                    </div>
+                    <div>
+                        <img src="./img/La La Land.jpg">
+                        <div class="movie_title">라라랜드</div>
+                    </div>
+                    <div>
+                        <img src="./img/Whiplash.jpg">
+                        <div class="movie_title">위플래쉬</div>
+                    </div>
+                    <div>
+                        <img src="./img/CODA.jpg">
+                        <div class="movie_title">코다</div>
+                    </div>
+                </div>
+                <div class="award_btn_container">
+                    <button class="award_btn " id="award_prev"><img src="./img/prev.png" alt="prev button"></button>
+                    <button class="award_btn " id="award_next"><img src="./img/next.png" alt="next button"></button>
+                </div>
+            </div>
+        </section>
+        <section class="animation">
+            <div class="animation_content">
+                <div class="animation_title">
+                    <h4>극장판 애니메이션</h4>
+                </div>
+                <div class="animation_slide">
+                    <div>
+                        <img src="./img/The Spiriting Away Of Sen And Chihiro.jpg">
+                        <div class="movie_title">센과 치히로의 행방불명</div>
+                    </div>
+                    <div>
+                        <img src="./img/Howl's Moving Castle.jpg">
+                        <div class="movie_title">하울의 움직이는 성</div>
+                    </div>
+                    <div>
+                        <img src="./img/Soul.jpg">
+                        <div class="movie_title">소울</div>
+                    </div>
+                    <div>
+                        <img src="./img/The First Slam Dunk.jpg">
+                        <div class="movie_title">더 퍼스트 슬램덩크</div>
+                    </div>
+                    <div>
+                        <img src="./img/The Simpsons Movie.jpg">
+                        <div class="movie_title">심슨 가족, 더 무비</div>
+                    </div>
+                </div>
+                <div class="animation_btn_container">
+                    <button class="animation_btn " id="animation_prev"><img src="./img/prev.png" alt="prev button"></button>
+                    <button class="animation_btn " id="animation_next"><img src="./img/next.png" alt="next button"></button>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer_inner">
+            <p>질문이 있으신가요? 문의 전화: 010-5120-7862</p>
+            <ul>
+                <li>자주 묻는 질문</li>
+                <li>고객센터</li>
+                <li>계정</li>
+                <li>미디어 센터</li>
+                <li>투자정보(IR)</li>
+                <li>입사 정보</li>
+                <li>무비슛 지원 디바이스</li>
+                <li>이용 약관</li>
+                <li>개인정보 처리방침</li>
+                <li>쿠키 설정</li>
+                <li>회사 정보</li>
+                <li>문의하기</li>
+                <li>속도 테스트</li>
+                <li>법적 고지</li>
+                <li>오직 무비슛에서</li>
+            </ul>
+            <p>무비슛 대한민국</p>
+            <p>
+                무비슛서비스코리아 유한회사 통신판매업신고번호: 제0000-인천계양-0000호 전화번호: 000-000-0000<br>
+                대표: 정지인<br>
+                이메일 주소: wldls0309@naver.com<br>
+                주소: 대한민국 인천광역시 계양구 0000로 00, 0동 0층 우편번호 00000<br>
+                사업자등록번호: 000-00-00000<br>
+                클라우드 호스팅: Amazon Web Services Inc.<br>
+                공정거래위원회 웹사이트
+                </p>
+        </div>
+    </footer>
+
     <!-- script -->
-    <script src="./js/index_movie.js"></script>
+
     <script src="./library/swiper5/swiper.min.js"></script>
     <script src="./js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script  type="text/javascript">
+        //top10 슬라이드
+        $(document).ready(function(){
+            $('.top10_slide').slick({
+                infinite : false,
+                slidesToShow: 4,
+                slidesToScroll:1,
+                dots : false,
+                prevArrow: $('#top10_prev'),
+                nextArrow: $('#top10_next'),
+                responsive: [
+                {  
+                breakpoint: 1024, //화면 사이즈 1024px
+                settings: {
+                slidesToShow: 3
+                        } 
+                    },
+                    { 
+                breakpoint: 767, //화면 사이즈 767px
+                settings: {    
+                slidesToShow: 3
+                        } 
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script  type="text/javascript">
+        //lately 슬라이드
+        $(document).ready(function(){
+            $('.lately_slide').slick({
+                infinite : true,
+                slidesToShow: 4,
+                slidesToScroll:1,
+                dots : false,
+                prevArrow: $('#lately_prev'),
+                nextArrow: $('#lately_next'),
+                responsive: [
+                {  
+                breakpoint: 1024, //화면 사이즈 1024px
+                settings: {
+                slidesToShow: 3
+                        } 
+                    },
+                    { 
+                breakpoint: 767, //화면 사이즈 767px
+                settings: {    
+                slidesToShow: 3
+                        } 
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script  type="text/javascript">
+        //award 슬라이드
+        $(document).ready(function(){
+            $('.award_slide').slick({
+                infinite : true,
+                slidesToShow: 4,
+                slidesToScroll:1,
+                dots : false,
+                prevArrow: $('#award_prev'),
+                nextArrow: $('#award_next'),
+                responsive: [
+                {  
+                breakpoint: 1024, //화면 사이즈 1024px
+                settings: {
+                slidesToShow: 3
+                        } 
+                    },
+                    { 
+                breakpoint: 767, //화면 사이즈 767px
+                settings: {    
+                slidesToShow: 3
+                        } 
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script  type="text/javascript">
+        //animation 슬라이드
+        $(document).ready(function(){
+            $('.animation_slide').slick({
+                infinite : true,
+                slidesToShow: 4,
+                slidesToScroll:1,
+                dots : false,
+                prevArrow: $('#animation_prev'),
+                nextArrow: $('#animation_next'),
+                responsive: [
+                {  
+                breakpoint: 1024, //화면 사이즈 1024px
+                settings: {
+                slidesToShow: 3
+                        } 
+                    },
+                    { 
+                breakpoint: 767, //화면 사이즈 767px
+                settings: {    
+                slidesToShow: 3
+                        } 
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 </html>
