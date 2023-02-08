@@ -172,39 +172,38 @@
 }
 
 .footer .footer_inner {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
     color: #ffffff;
-    padding-top: 130px;
-    padding-bottom: 50px;
-    padding-left: 120px;
+    padding: 100px 0 40px 50px;
 }
 
 .footer .footer_inner p:nth-of-type(1) {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .footer .footer_inner ul {
-    height: 280px;
+    height: 225px;
     width: 100%;
-    padding-top: 50px;
+    padding: 40px 0;
 }
 
 .footer .footer_inner ul li {
-    line-height: 70px;
+    line-height: 45px;
     float: left;
-    width: 25%;
-    font-size: 13px;
+    width: 33.33%;
+    font-size: 8px;
 }
 
 .footer .footer_inner p:nth-of-type(2) {
-    font-size: 14px;
-    padding: 30px 0;
+    font-size: 10px;
 }
 
 .footer .footer_inner p:nth-of-type(3) {
-    font-size: 12px;
-    line-height: 130%;
+    padding-top: 40px;
+    font-size: 8px;
+    line-height: 150%;
+    width: 350px;
 }
 
 
@@ -291,6 +290,33 @@
         font-weight: 500;
     }
 
+    
+    .footer .footer_inner {
+        padding: 100px 0 40px 100px;
+    }
+    
+    .footer .footer_inner p:nth-of-type(1) {
+        font-size: 13px;
+    }
+    
+    .footer .footer_inner ul {
+        height: 180px;
+    }
+    
+    .footer .footer_inner ul li {
+        width: 25%;
+        font-size: 10px;
+    }
+    
+    .footer .footer_inner p:nth-of-type(2) {
+        font-size: 11px;
+    }
+    
+    .footer .footer_inner p:nth-of-type(3) {
+        font-size: 10px;
+        width: 100%;
+    }
+
 }
 
 /* pc: 1024px 이상 */
@@ -320,6 +346,32 @@
 
     .header__nav .menu .menu__main li a {
         font-size: 17px;
+    }
+
+    .footer .footer_inner {
+        padding: 100px 0 40px 150px;
+    }
+    
+    .footer .footer_inner p:nth-of-type(1) {
+        font-size: 15px;
+    }
+    
+    .footer .footer_inner ul {
+        height: 280px;
+    }
+    
+    .footer .footer_inner ul li {
+        line-height: 70px;
+        width: 25%;
+        font-size: 12px;
+    }
+    
+    .footer .footer_inner p:nth-of-type(2) {
+        font-size: 14px;
+    }
+    
+    .footer .footer_inner p:nth-of-type(3) {
+        font-size: 11px;
     }
 
 }

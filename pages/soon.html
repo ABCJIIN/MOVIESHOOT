@@ -9,24 +9,46 @@
     <link rel="stylesheet" href="../css/common.css">
     
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&display=swap');
 
+        /* 모바일: 0~766px*/
         .wrap {
             width: 100%;
             background: #000000;
         }
-
         .wrap .soon {
             width: 100%;
-            height: 500px;
+            height: 300px;
             color: #ffffff;
             text-align: center;
-            line-height: 500px;
-            font-size: 50px;
+            line-height: 300px;
+            font-size: 30px;
             font-family: 'IBM Plex Sans KR', sans-serif;
             font-weight: 500;
+            padding-top: 100px;
         }
+
+        /* 테블릿: 767px 이상*/
+        @media all and (min-width:767px) {
+
+            .wrap .soon {
+            height: 400px;
+            line-height: 400px;
+            font-size: 40px;
+        }
+
+    }
+
+        /* pc: 1024px 이상 */
+        @media all and (min-width:1024px) {
+
+        .wrap .soon {
+            height: 500px;
+            line-height: 500px;
+            font-size: 50px;
+        }
+
+    }
 
     </style>
 </head>
@@ -70,7 +92,7 @@
         </div>
     </header>
     <main class="wrap">
-        <div class="soon">coming soon...</div>
+        <div class="soon">coming soon</div>
     </main>
     <footer class="footer">
         <div class="footer_inner">
