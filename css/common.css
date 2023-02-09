@@ -108,7 +108,7 @@
     align-items: center;
 }
 
-.header__nav .header__nav__left h1 a img {
+.header__nav .header__nav__left > div a img {
     width: 60px;
 }
 
@@ -232,7 +232,7 @@
         padding-top: 10px;
     }
 
-    .header__nav .header__nav__left h1 a img {
+    .header__nav .header__nav__left div a img {
         width: 70px;
     }
 
@@ -328,7 +328,7 @@
         padding-top: 20px;
     }
 
-    .header__nav .header__nav__left h1 a img {
+    .header__nav .header__nav__left > div a img {
         width: 80px;
     }
 
